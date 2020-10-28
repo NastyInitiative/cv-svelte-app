@@ -24,14 +24,14 @@
 }
 
 .animate-text {
-    color: $white;
+    a {
+        color: $white;
+    }
 }
 
-.animate-text:hover {
-    color: $orange;
-    transition: color 250ms ease-in-out;
-}
-
-Link {
-    color: beige;
+.animate-text:hover{
+    a {
+        color: $orange;
+        transition: color 250ms ease-in-out;
+    }
 }
