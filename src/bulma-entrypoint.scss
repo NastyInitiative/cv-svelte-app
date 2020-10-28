@@ -1,2 +1,37 @@
 @charset 'utf-8';
-@import 'node_modules/bulma/bulma.sass';
+@import 'bulma/bulma.sass';
+ 
+.animate-border {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+.animate-border::after {
+    content: '';
+    display: block;
+    /* width: 0; */
+    height: 1px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+  
+.animate-border:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
+    background-color: $orange;
+}
+
+.animate-text {
+    color: $white;
+}
+
+.animate-text:hover {
+    color: $orange;
+    transition: color 250ms ease-in-out;
+}
+
+Link {
+    color: beige;
+}

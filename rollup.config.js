@@ -2,6 +2,7 @@ import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
+import scss from 'rollup-plugin-scss';
 import { terser } from 'rollup-plugin-terser';
 import { sveltePreprocess } from 'svelte-preprocess/dist/autoProcess';
 
@@ -36,8 +37,10 @@ export default {
 		name: 'app',
 		file: 'public/build/bundle.js'
 	},
+
 	plugins: [
 		svelte({
+			hydratable: true,
 			// enable run-time checks when not in production
 			dev: !production,
 			// we'll extract any component CSS out into
@@ -49,7 +52,6 @@ export default {
 				transformers: {
 					scss: {
 					  includePaths: [
-						'node_modules',
 						'src'
 					  ]
 					}
@@ -62,7 +64,9 @@ export default {
 			}),
 
 		}),
-
+		scss({
+			output: './public/build/bundle.css'
+		}),
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
 		// some cases you'll need additional configuration -
