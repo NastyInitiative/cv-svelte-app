@@ -36,7 +36,12 @@
     }
 }
 
-.animate-bg {
-    background-color: $primary;
-    transition: background-color 250ms ease-in-out;
+.hide {
+    display: none;
+}
+
+@media screen and  ( max-width: 1024px) {
+    .lg-screen-menu {
+        display: none;
+    }
 }

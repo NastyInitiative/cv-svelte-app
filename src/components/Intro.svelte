@@ -1,11 +1,10 @@
 <script>
 	export const id = 'intro';
 	import {  fade, fly, slide  } from 'svelte/transition';
-	import getRandomInt from '../utils';
 
 </script>
-<div class="card"  transition:fly="{{x: getRandomInt(-200, 400), duration: 900 }}">
-	<header class="card-header"> 
+<div class="card">
+	<header class="card-header" transition:fly="{{y: 200, duration: 900 }}"> 
 		<p class="card-header-title">
 			Component
 		</p>
