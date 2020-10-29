@@ -35,3 +35,8 @@
         transition: color 250ms ease-in-out;
     }
 }
+
+.animate-bg {
+    background-color: $primary;
+    transition: background-color 250ms ease-in-out;
+}
