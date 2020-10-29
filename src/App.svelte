@@ -3,12 +3,7 @@
 	import routes from './router';
 	import {  fade, fly, slide  } from 'svelte/transition';
 	import { quintInOut, quintOut } from 'svelte/easing';
-
-	function getRandomInt(min, max) {
-		min = Math.ceil(min);
-		max = Math.floor(max);
-		return Math.floor(Math.random() * (max - min)) + min; //Il max è escluso e il min è incluso
-	}
+	import getRandomInt from './utils';
 
 	export let url = "";
  </script>
@@ -32,7 +27,7 @@
 				<div class="column is-12 is-gapless">
 					{#each routes as singleRoute (singleRoute.id)}
 							<Route path={singleRoute.path} >
-								<div transition:slide="{{x: getRandomInt(-200, 500), y: getRandomInt(-200, 500),duration: 900, easing:quintOut}}">
+								<div transition:slide="{{duration: 900, easing:quintOut}}">
 									<svelte:component this={singleRoute.component} ></svelte:component>
 								</div>
 							</Route>
