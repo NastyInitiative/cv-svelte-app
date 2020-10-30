@@ -1,6 +1,6 @@
 <script>
 	import {Router, Route, Link} from 'svelte-routing';
-	import routes from './router';
+	import routes from './component-routes';
 	import { slide  } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	import Home from './components/Home.svelte'
@@ -25,8 +25,8 @@
 							{#each routes as singleRoute }
 								<span>
 									<!-- svelte-ignore a11y-missing-attribute -->
-									<a transition:slide="{{x:200, duration: 500}}" on:click={() => isBurgerMenuVisible = !isBurgerMenuVisible} class="navbar-item is-active animate-text">
-										<Link  to={singleRoute.path}>{singleRoute.name}</Link>
+									<a class="navbar-item is-active animate-text is-size-5" on:click={() => isBurgerMenuVisible = !isBurgerMenuVisible}>
+										<Link to={singleRoute.path}>{singleRoute.name}</Link>
 									</a>
 								</span>
 							{/each}
@@ -52,9 +52,7 @@
 						{#each routes as singleRoute}
 							<li class="animate-border animate-text">
 								<div class="center-items">
-									<p class="">
-										<Link to={singleRoute.path}>{singleRoute.name}</Link>
-									</p>
+									<Link to={singleRoute.path}>{singleRoute.name}</Link>
 								</div>
 							</li>
 						{/each}
@@ -69,7 +67,7 @@
 			<h2 class="subtitle">
 			A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
 			</h2>
-			{#each routes as singleRoute (singleRoute.id)}
+			{#each routes as singleRoute}
 				<div>
 					<Route path={singleRoute.path} >
 						<div transition:slide="{{duration: 1200, easing:quintOut}}">
