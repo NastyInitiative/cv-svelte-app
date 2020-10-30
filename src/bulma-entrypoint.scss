@@ -48,3 +48,13 @@
         display: none ;
     }
 }
+
+.center-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 0;
+}

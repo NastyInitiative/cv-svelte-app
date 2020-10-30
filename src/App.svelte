@@ -14,7 +14,7 @@
  </script>
 
 <Router url={url}>
-	<section class="hero is-primary is-fullheight" style="position:relative; overflow: hidden;">
+	<section class="hero is-primary is-fullheight ">
 		<div class="hero-head">
 			<nav class="navbar">
 				<div class="container">
@@ -43,9 +43,9 @@
 				</div>
 			</nav>
 		</div>
-		<div class="hero-body is-centered">
+		<div class="hero-body ">
 			{#if isVisible}
-				<div transition:slide="{{x:200, duration: 900}}" class="columns mr-6">
+				<div transition:slide="{{x:200, duration: 500}}" class="columns">
 					<div  class="column is-4">
 						{#each routes as singleRoute}
 							<div class="mt-5">
@@ -57,16 +57,17 @@
 					</div>
 				</div>
 			{/if}
-
-			<div class="columns is-centered" >
-				<div class="column is-12 is-gapless">
-					{#each routes as singleRoute (singleRoute.id)}
-							<Route path={singleRoute.path} >
-								<div transition:slide="{{duration: 900, easing:quintOut}}">
-									<svelte:component this={singleRoute.component} ></svelte:component>
-								</div>
-							</Route>
-					{/each}	
+			<div class="container center-items">
+				<div class="columns " >
+					<div class="column is-12 is-gapless">
+						{#each routes as singleRoute (singleRoute.id)}
+								<Route path={singleRoute.path} >
+									<div transition:slide="{{duration: 900, easing:quintOut}}">
+										<svelte:component this={singleRoute.component} ></svelte:component>
+									</div>
+								</Route>
+						{/each}	
+					</div>
 				</div>
 			</div>
 		</div>
