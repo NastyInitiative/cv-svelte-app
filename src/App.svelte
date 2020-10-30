@@ -3,12 +3,13 @@
 	import routes from './router';
 	import { slide  } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
+	import Home from './components/Home.svelte'
 	let isBurgerMenuVisible = false;
 	export let url = "";
  </script>
 
 <Router url={url}>
-	<section class="hero is-primary is-fullheight ">
+	<section class="hero is-primary is-medium ">
 		<div class="hero-head">
 			<nav class="navbar">
 				<div class="container">
@@ -38,15 +39,7 @@
 			<div class="container center-items">
 				<div class="columns">
 					<div class="column is-12 is-gapless">
-						{#each routes as singleRoute (singleRoute.id)}
-							<div>
-								<Route path={singleRoute.path} >
-									<div transition:slide="{{duration: 1200, easing:quintOut}}">
-										<svelte:component this={singleRoute.component} ></svelte:component>
-									</div>
-								</Route>
-							</div>
-						{/each}	
+						<Home></Home>
 					</div>
 				</div>
 			</div>
@@ -68,6 +61,23 @@
 					</ul>
 				</div>
 			</nav>
+		</div>
+	</section>
+	<section class="section">
+		<div class="container">
+			<h1 class="title">Section</h1>
+			<h2 class="subtitle">
+			A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+			</h2>
+			{#each routes as singleRoute (singleRoute.id)}
+				<div>
+					<Route path={singleRoute.path} >
+						<div transition:slide="{{duration: 1200, easing:quintOut}}">
+							<svelte:component this={singleRoute.component} ></svelte:component>
+						</div>
+					</Route>
+				</div>
+			{/each}	
 		</div>
 	</section>
 </Router>
