@@ -1,9 +1,7 @@
 <script>
-	import {  fade, fly, slide  } from 'svelte/transition';
-	import getRandomInt from '../utils';
-
+	import { fly } from 'svelte/transition';
 </script>
-<div class="card" transition:fly="{{x: getRandomInt(-200, 400), duration: 900, delay:900 }}">
+<div class="card" transition:fly="{{x: 200, duration: 900, delay:900 }}">
 	<header class="card-header">
 		<p class="card-header-title">
 			Component

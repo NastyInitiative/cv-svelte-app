@@ -1,8 +1,4 @@
 <script>
-	export const id = 'intro';
-	import {  fade, fly, slide  } from 'svelte/transition';
-	import { quintInOut, quintOut } from 'svelte/easing';
-
 
 </script>
 

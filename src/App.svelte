@@ -1,12 +1,8 @@
 <script>
 	import {Router, Route, Link} from 'svelte-routing';
 	import routes from './router';
-	import {  fade, fly, slide  } from 'svelte/transition';
-	import { quintInOut, quintOut } from 'svelte/easing';
-	import getRandomInt from './utils';
-	import { onMount } from 'svelte';
-	import { flip } from 'svelte/animate';
-	let isVisible = false;
+	import { slide  } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
 	let isBurgerMenuVisible = false;
 	export let url = "";
  </script>
@@ -43,7 +39,7 @@
 				<div class="columns">
 					<div class="column is-12 is-gapless">
 						{#each routes as singleRoute (singleRoute.id)}
-							<div animate:flip>
+							<div>
 								<Route path={singleRoute.path} >
 									<div transition:slide="{{duration: 1200, easing:quintOut}}">
 										<svelte:component this={singleRoute.component} ></svelte:component>
