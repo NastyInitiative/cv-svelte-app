@@ -31,7 +31,7 @@
 
 .animate-text:hover{
     a {
-        color: $orange;
+        color: $orange !important;
         transition: color 250ms ease-in-out;
     }
 }
@@ -41,6 +41,9 @@
 }
 
 @media screen and  ( max-width: 1024px) {
+    .is-on-desktop {
+        display: none;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -53,8 +56,4 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.container {
-    margin: 0;
 }
