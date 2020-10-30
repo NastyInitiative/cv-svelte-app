@@ -23,12 +23,12 @@
 							<span></span>
 						</span>
 					</div>
-					<div  id="navbarMenuHeroA" class="navbar-menu { isBurgerMenuVisible ? 'is-active' : ''}">
+					<div  id="navbarMenuHeroA" class="navbar-menu { isBurgerMenuVisible ? 'is-active' : ''}" transition:slide="{{x:200, duration: 500}}">
 						<div class="navbar-end">
 							{#each routes as singleRoute }
-								<span transition:slide="{{x:200, duration: 500}}">
+								<span>
 									<!-- svelte-ignore a11y-missing-attribute -->
-									<a transition:slide="{{x:200, duration: 500}}" class="navbar-item is-active animate-text">
+									<a transition:slide="{{x:200, duration: 500}}" on:click={() => isBurgerMenuVisible = !isBurgerMenuVisible} class="navbar-item is-active animate-text">
 										<Link  to={singleRoute.path}>{singleRoute.name}</Link>
 									</a>
 								</span>
@@ -63,7 +63,7 @@
 						{#each routes as singleRoute}
 							<li class="animate-border animate-text">
 								<div class="center-items">
-									<p class="animate-border animate-text">
+									<p class="">
 										<Link to={singleRoute.path}>{singleRoute.name}</Link>
 									</p>
 								</div>

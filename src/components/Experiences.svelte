@@ -4,7 +4,7 @@
 
 </script>
 
-<div class="card" transition:fly="{{x: getRandomInt(-200, 400), duration: 900 }}">
+<div class="card" transition:fly="{{x: getRandomInt(-200, 400), duration: 900 , delay:900}}">
 	<header class="card-header">
 		<p class="card-header-title">
 			Component
@@ -16,11 +16,12 @@
 		</a>
 	</header>
 	<div class="card-content">
-		<div class="content">
+		<div class="content center-items">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
 			<a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
 			<br>
 			<time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+
 		</div>
 	</div>
 	<footer class="card-footer">

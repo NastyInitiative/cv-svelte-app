@@ -7,7 +7,7 @@
     text-decoration: none;
 }
 
-.animate-border::after {
+.animate-border::before {
     content: '';
     display: block;
     /* width: 0; */
@@ -17,7 +17,7 @@
     transition: transform 250ms ease-in-out;
 }
   
-.animate-border:hover::after {
+.animate-border:hover::before {
     transform: scaleX(1);
     transform-origin: center;
     background-color: $orange;
@@ -56,4 +56,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+a:hover {
+    background-color: rgba(0, 0, 0, 0) !important;
 }
