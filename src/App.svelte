@@ -8,6 +8,8 @@
 	onMount(() => {
 		toggleBurgerMenu();
 	});
+
+	let isVisible = false;
 	export let url = "";
  </script>
 
@@ -32,23 +34,31 @@
 							{/each}
 						</div>
 					</div>
+					<div id="navbarMenuHeroB" class="navbar-menu">
+						<div class="navbar-start">
+						  <a on:click={() => isVisible = !isVisible} class="navbar-item is-active">
+							  Menu
+						  </a>
+						</div>
 				</div>
 			</nav>
 		</div>
-		<div class="hero-body">
-			<div class="columns mr-6">
-				<div class="column is-4 lg-screen-menu">
-					{#each routes as singleRoute}
-						<div class="mt-5">
-							<p class="animate-border animate-text is-size-3">
-								<Link to={singleRoute.path}>{singleRoute.name}</Link>
-							</p>
-						</div>
-					{/each}
+		<div class="hero-body is-centered">
+			{#if isVisible}
+				<div transition:slide="{{x:200, duration: 900}}" class="columns mr-6">
+					<div  class="column is-4">
+						{#each routes as singleRoute}
+							<div class="mt-5">
+								<p on:click={() => isVisible = !isVisible} class="animate-border animate-text is-size-4">
+									<Link to={singleRoute.path}>{singleRoute.name}</Link>
+								</p>
+							</div>
+						{/each}
+					</div>
 				</div>
-			</div>
+			{/if}
 
-			<div class="columns" >
+			<div class="columns is-centered" >
 				<div class="column is-12 is-gapless">
 					{#each routes as singleRoute (singleRoute.id)}
 							<Route path={singleRoute.path} >
