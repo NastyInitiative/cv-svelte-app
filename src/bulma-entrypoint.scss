@@ -5,34 +5,37 @@
     display: inline-block;
     color: #000;
     text-decoration: none;
-}
+    &::before, &::after {
+        content: '';
+        display: block;
+        /* width: 0; */
+        height: 2px;
+        background-color: white;
+        transform: scaleX(0);
+        transition: transform 480ms ease-in-out;
+    }
 
-.animate-border::before {
-    content: '';
-    display: block;
-    /* width: 0; */
-    height: 1px;
-    background-color: white;
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
-}
-  
-.animate-border:hover::before {
-    transform: scaleX(1);
-    transform-origin: center;
-    background-color: $orange;
+    &:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
+        background-color: $orange;
+    }
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: right;
+        background-color: $orange;
+    }
 }
 
 .animate-text {
     a {
         color: $white;
     }
-}
-
-.animate-text:hover{
-    a {
-        color: $orange !important;
-        transition: color 250ms ease-in-out;
+    &:hover {
+        a {
+            color: $orange !important;
+            transition: color 250ms ease-in-out;
+        }
     }
 }
 

@@ -63,18 +63,12 @@
 	</section>
 	<section class="section">
 		<div class="container">
-			<h1 class="title">Section</h1>
-			<h2 class="subtitle">
-			A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-			</h2>
 			{#each routes as singleRoute}
-				<div>
 					<Route path={singleRoute.path} >
-						<div transition:slide="{{duration: 1200, easing:quintOut}}">
+						<div  class="tile is-ancestor" transition:slide="{{duration: 1200, easing:quintOut}}">
 							<svelte:component this={singleRoute.component} ></svelte:component>
 						</div>
 					</Route>
-				</div>
 			{/each}	
 		</div>
 	</section>
