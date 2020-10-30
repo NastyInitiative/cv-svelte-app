@@ -35,7 +35,7 @@
 						</div>
 					</div>
 					<div id="navbarMenuHeroB" class="navbar-menu">
-						<div class="navbar-start">
+						<div class="navbar-end">
 						  <a on:click={() => isVisible = !isVisible} class="navbar-item is-active">
 							  Menu
 						  </a>
