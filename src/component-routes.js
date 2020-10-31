@@ -1,6 +1,6 @@
-import About from './components/About.svelte';
-import Skills from './components/Skills.svelte';
-import Experiences from './components/Experiences.svelte';
+import About from './components/pages/About.svelte';
+import Skills from './components/pages/Skills.svelte';
+import Experiences from './components/pages/Experiences.svelte';
 
 const routes = [
     {name: 'About', path: 'about', component: About},
