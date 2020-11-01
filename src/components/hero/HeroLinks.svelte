@@ -1,5 +1,5 @@
 <script>
-	import {Router, Route, Link, navigate} from 'svelte-routing';
+	import {Link} from 'svelte-routing';
     export let routes;
 </script>
 

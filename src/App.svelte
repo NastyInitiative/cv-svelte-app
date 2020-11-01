@@ -1,7 +1,7 @@
 <script>
 	import {Router, Route, Link, navigate} from 'svelte-routing';
 	import routes from './component-routes';
-	import Hero from './components/hero/Hero.svelte';
+	import HeroMain from './components/hero/HeroMain.svelte';
 	import PageRoutes from  './components/PageRoutes.svelte';
 	import BurgerMenu from './components/hero/BurgerMenu.svelte'
 	import HeroLinks from './components/hero/HeroLinks.svelte';
@@ -22,7 +22,7 @@
 			<div class="container center-items">
 				<div class="columns">
 					<div class="column is-12 is-gapless">
-						<Hero></Hero>
+						<HeroMain></HeroMain>
 					</div>
 				</div>
 			</div>
@@ -40,4 +40,20 @@
 			<PageRoutes {routes}></PageRoutes>
 	</section>
 	<!-- END Main section -->
+
 </Router>
+
+<footer class="footer">
+	<div class="content has-text-centered">
+		<p>
+			Made with lots of <span class="red-text">love</span> and fried brain cells by NastyInitiative
+		</p>
+		The awesome tech I used: 
+		<a href="https://bulma.io">
+			<img src="https://bulma.io/images/made-with-bulma--dark.png" alt="Made with Bulma" width="128" height="24">
+		</a>
+		<a href="https://svelte.dev/">
+			<img src="/logos/svelte-horizontal.svg" alt="Made with Svelte" width="128" height="24">
+		</a>
+	</div>
+</footer>
