@@ -71,3 +71,50 @@ a:hover {
 .bulma-badge {
     background-image: url("/images/made-with-bulma--dark.png");
 }
+
+.progress.is-purple {
+
+    &::-webkit-progress-value {
+        background-color: rgba($color: #512DA8, $alpha: 1.0);
+    }
+
+    &::-moz-progress-bar {
+        background-color: rgba($color: #512DA8, $alpha: 1.0)
+    }
+
+    &::-ms-fill {
+        background-color:rgba($color: #512DA8, $alpha: 1.0)
+    }
+}
+
+.progress.is-orange {
+
+    &::-webkit-progress-value {
+        background-color: rgba($color: #E64A19, $alpha: 1.0);
+    }
+
+    &::-moz-progress-bar {
+        background-color: rgba($color: #E64A19, $alpha: 1.0);
+    }
+
+    &::-ms-fill {
+        background-color:rgba($color: #E64A19, $alpha: 1.0);
+    }
+}
+
+.progress.is-lightorange {
+
+    &::-webkit-progress-value {
+        background-color: rgba($color: #FF9800, $alpha: 1.0);
+    }
+
+    &::-moz-progress-bar {
+        background-color: rgba($color: #FF9800, $alpha: 1.0);
+    }
+
+    &::-ms-fill {
+        background-color:rgba($color: #FF9800, $alpha: 1.0);
+    }
+}
+
+

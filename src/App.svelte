@@ -49,10 +49,10 @@
 			Made with lots of <span class="red-text">love</span> and fried brain cells by NastyInitiative
 		</p>
 		The awesome tech I used: 
-		<a href="https://bulma.io">
+		<a href="https://bulma.io" target="_blank">
 			<img src="https://bulma.io/images/made-with-bulma--dark.png" alt="Made with Bulma" width="128" height="24">
 		</a>
-		<a href="https://svelte.dev/">
+		<a href="https://svelte.dev/" target="_blank">
 			<img src="/logos/svelte-horizontal.svg" alt="Made with Svelte" width="128" height="24">
 		</a>
 	</div>
