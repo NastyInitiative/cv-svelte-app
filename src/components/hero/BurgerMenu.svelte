@@ -10,9 +10,9 @@
         <div class="navbar-brand">
             <span class="navbar-burger burger {isBurgerMenuVisible ? 'is-active' : ''}" 
                         on:click={() => isBurgerMenuVisible = !isBurgerMenuVisible} >
-                <span></span>
-                <span></span>
-                <span></span>
+                <span style="background-color: white"></span>
+                <span style="background-color: white"></span>
+                <span style="background-color: white"></span>
             </span>
         </div>
         <div  id="navbarMenuHeroA" class="navbar-menu { isBurgerMenuVisible ? 'is-active' : ''}" 

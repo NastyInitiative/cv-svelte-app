@@ -3,9 +3,9 @@ import Skills from './components/pages/Skills.svelte';
 import Experiences from './components/pages/Experiences.svelte';
 
 const routes = [
-    {name: 'About', path: 'about', component: About},
-    {name: 'Skills', path: 'skills', component: Skills},
-    {name: 'Experiences', path: 'experiences', component: Experiences},
+    {name: 'About', path: 'about', bg_class: "nasty-bg",component: About},
+    {name: 'Skills', path: 'skills',bg_class: "skills-bg", component: Skills},
+    {name: 'Experiences', path: 'experiences', bg_class: "nasty-bg", component: Experiences},
 ];
 
 export default routes;

@@ -1,40 +1,19 @@
 <script>
 	import { fly } from 'svelte/transition';
-
-
-	let skills = [
-		{tech: 'HTML', level: '80', color: 'is-lightorange'},
-		{tech: 'CSS', level: '65', color: 'is-info'},
-		{tech: 'JavaScript', level: '70', color: 'is-warning'},
-		{tech: 'jQuery', level: '70', color: 'is-link'},
-		{tech: 'BootStrap', level: '65', color: 'is-purple'},
-		{tech: 'Bulma', level: '50', color: 'is-primary'},
-		{tech: 'Svelte', level: '40', color: 'is-orange'},
-		{tech: 'Angular', level: '40', color: 'is-danger'}
-	];
-
+	import {Router, Route, Link, navigate, link} from 'svelte-routing';
+	import ProgrammingSkills from './skill_pages/ProgrammingSkills.svelte';
+	import OtherSkills from './skill_pages/OtherSkills.svelte';
+	import { slide  } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
+	import { onMount } from 'svelte';
+	export let bg = "skills-bg";
 </script>
-<div class="tile is-4 is-vertical is-parent " transition:fly="{{x: -200, duration: 900, delay:600}}"> 
-	<div class="tile is-child box">
-		<p class="title">One</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-	</div>
-	<div class="tile is-child box">
-		<p class="title">Two</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
-	</div>
-</div>
-<div class="tile is-parent " transition:fly="{{x: 200, duration: 900, delay:600}}">
-	<div class="tile is-child box">
-		<p class="title">Skills</p>
 
-		{#each skills as singleSkill }
-			<p>{singleSkill.tech}</p>
-			<progress class="progress is-small {singleSkill.color}" value="{singleSkill.level}" max="100">singleSkill.level</progress>
-		{/each}
-
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
-		<p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor.</p>
-		<p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non semper leo.</p>
+<div class="tile is-ancestor">
+	<div class="tile is-parent is-6">
+		<ProgrammingSkills></ProgrammingSkills>
+	</div>
+	<div class="tile is-parent is-6">
+		<OtherSkills></OtherSkills>
 	</div>
 </div>
