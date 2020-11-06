@@ -9,9 +9,11 @@
 	export let url = "";
 	let isBurgerMenuVisible = false;
 	onMount(() =>{
-			navigate("/", { replace: true })
+			// navigate("/", { replace: false })
 		} 
-	);
+		);
+		
+		// location.replace("/")
 </script>
 <Router url={url}>
 	<!-- START Hero section -->
