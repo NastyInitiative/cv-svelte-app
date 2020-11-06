@@ -1,31 +1,25 @@
 <script>
-	import {Router, Route, Link, navigate} from 'svelte-routing';
+	import { Router, navigate } from 'svelte-routing';
 	import routes from './component-routes';
 	import HeroMain from './components/hero/HeroMain.svelte';
 	import PageRoutes from  './components/PageRoutes.svelte';
 	import BurgerMenu from './components/hero/BurgerMenu.svelte'
 	import HeroLinks from './components/hero/HeroLinks.svelte';
 	import { onMount } from 'svelte';
-	import { fly, slide } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
-import About from './components/pages/About.svelte';
 	export let url = "";
-	let vertical;
 	let isBurgerMenuVisible = false;
-	let isvisible = true;
 	onMount(() =>{
 			navigate("/", { replace: false })
 		} 
 	);
-		
- </script>
+</script>
 <Router url={url}>
 	<!-- START Hero section -->
 	<section class="hero nasty-bg is-medium">
 		<div class="hero-head">
 			<BurgerMenu {routes} {isBurgerMenuVisible}></BurgerMenu>
 		</div>
-		<div class="hero-body" transition:slide="{{y:200, duration: 1000,dealy:1000, easing:quintOut}}">
+		<div class="hero-body">
 			<div class="container center-items">
 				<div class="columns">
 					<div class="column is-12" >

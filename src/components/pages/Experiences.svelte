@@ -1,6 +1,5 @@
 <script>
 	import { fly } from 'svelte/transition';
-	// export let bg ="nasty-bg";
 
 </script>
 

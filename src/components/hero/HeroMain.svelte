@@ -1,7 +1,6 @@
 <script>
 	import { draw, fly, slide } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
-	// export let bg = "nasty-bg";
 </script>
 
 

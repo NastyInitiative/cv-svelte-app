@@ -1,5 +1,5 @@
 <script>
-	import {Router, Route, Link, navigate, link} from 'svelte-routing';
+	import { link } from 'svelte-routing';
     import { slide } from 'svelte/transition';
     export let isBurgerMenuVisible;
     export let routes;

@@ -1,6 +1,5 @@
 <script>
-    import { quintOut } from 'svelte/easing';
-    import { fly, slide } from 'svelte/transition';
+    import { fly } from 'svelte/transition';
     let programmingSkills = [
 		{tech: 'HTML', level: '80', color: 'is-lightorange'},
 		{tech: 'CSS', level: '65', color: 'is-info'},

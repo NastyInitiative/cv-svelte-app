@@ -1,12 +1,9 @@
 <script>
-import { quintIn, quintOut } from 'svelte/easing';
-
-    import { fly, slide } from 'svelte/transition';
+    import { fly } from 'svelte/transition';
 </script>
 
 <div class="tile is-child is-12 box"  transition:fly="{{x: 200, duration: 900, delay: 200}}">
 	<p class="title">Tech Skills</p>
-
 	<div>
 		<h3>
 			Sistemi operativi conosciuti:
@@ -20,7 +17,6 @@ import { quintIn, quintOut } from 'svelte/easing';
 			</p>
 		</div>
 	</div>
-
 	<div class="mt-5">
 		<h3>			
 			Software di emulazione di macchine virtuali conosciuti:

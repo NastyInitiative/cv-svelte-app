@@ -1,5 +1,5 @@
 <script>
-	import {Route} from 'svelte-routing';
+	import { Route } from 'svelte-routing';
 	import { slide  } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 import About from './pages/About.svelte';
