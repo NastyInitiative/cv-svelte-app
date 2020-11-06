@@ -8,6 +8,7 @@
 	import { onMount } from 'svelte';
 	import { fly, slide } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
+import About from './components/pages/About.svelte';
 	export let url = "";
 	let vertical;
 	let isBurgerMenuVisible = false;
@@ -18,7 +19,6 @@
 	);
 		
  </script>
-<svelte:window bind:scrollY={vertical}/>
 <Router url={url}>
 	<!-- START Hero section -->
 	<section class="hero nasty-bg is-medium">
@@ -30,7 +30,6 @@
 				<div class="columns">
 					<div class="column is-12" >
 						<HeroMain></HeroMain>
-						<p class="animate-text">You have scrolled {vertical}</p>
 					</div>
 				</div>
 			</div>
@@ -46,6 +45,7 @@
 	<section class="section">
 		<div class="container">
 			<PageRoutes {routes}></PageRoutes>
+			<Route component="{About}"></Route>
 		</div>
 	</section>
 	<!-- END Main section -->
