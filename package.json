@@ -2,8 +2,8 @@
   "name": "portfolio-svelte-app",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "build": "rollup -c -s",
+    "dev": "rollup -c -w -s",
     "start": "sirv public -s"
   },
   "devDependencies": {
