@@ -3,7 +3,6 @@
 import { quintIn } from 'svelte/easing';
 import { fly } from 'svelte/transition';
     export let routes;
-	export let hero_size = "is-medium";
 
 </script>
 

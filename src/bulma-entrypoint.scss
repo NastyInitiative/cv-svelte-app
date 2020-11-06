@@ -29,11 +29,25 @@ $dot-bg:  url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmc
     }
 }
 
+@keyframes resizeAnimation {
+    0% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    } 
+    100% {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+}
 
+.animate-scroll {
+    animation: resizeAnimation 5s linear 2s  ease-in-out;
+}
 
 .animate-text {
     a {
-        color: $white;
+        // color: $white;
+        color: white !important;
     }
     &:hover {
         a {
@@ -42,21 +56,6 @@ $dot-bg:  url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmc
         }
     }
 }
-
-// @keyframes cool-hero-text-animation {
-//     0% {
-//         transform: translateX(-100%);
-//     }
-//     100% {
-//         transform-origin: right;
-
-//         transform: translateX(0);
-//     }
-// }
-
-// .animate-p {
-//    animation: 1s ease-out 0s 1 cool-hero-text-animation;
-// }
 
 .hide {
     display: none;

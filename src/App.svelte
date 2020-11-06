@@ -9,23 +9,28 @@
 	import { fly, slide } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	export let url = "";
+	let vertical;
 	let isBurgerMenuVisible = false;
-	onMount(() => navigate("/about", { replace: true }));
-	// export let hero_size ="is-large";
+	let isvisible = true;
+	onMount(() =>{
+			navigate("/about", { replace: false })
+		} 
+	);
+		
  </script>
-
+<svelte:window bind:scrollY={vertical}/>
 <Router url={url}>
-
 	<!-- START Hero section -->
-	<section class="hero nasty-bg is-medium" transition:slide="{{duration: 8000, delay:6000, easing:quintOut}}">
+	<section class="hero nasty-bg is-medium">
 		<div class="hero-head">
 			<BurgerMenu {routes} {isBurgerMenuVisible}></BurgerMenu>
 		</div>
-		<div class="hero-body" transition:fly="{{y:200, duration: 1000,dealy:1000, easing:quintOut}}">
+		<div class="hero-body" transition:slide="{{y:200, duration: 1000,dealy:1000, easing:quintOut}}">
 			<div class="container center-items">
 				<div class="columns">
-					<div class="column is-12 is-gapless" t>
+					<div class="column is-12" >
 						<HeroMain></HeroMain>
+						<p class="animate-text">You have scrolled {vertical}</p>
 					</div>
 				</div>
 			</div>
