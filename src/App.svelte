@@ -13,7 +13,7 @@
 	let isBurgerMenuVisible = false;
 	let isvisible = true;
 	onMount(() =>{
-			navigate("/about", { replace: false })
+			navigate("/", { replace: false })
 		} 
 	);
 		
