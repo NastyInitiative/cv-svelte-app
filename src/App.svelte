@@ -45,7 +45,6 @@ import About from './components/pages/About.svelte';
 	<section class="section">
 		<div class="container">
 			<PageRoutes {routes}></PageRoutes>
-			<Route component="{About}"></Route>
 		</div>
 	</section>
 	<!-- END Main section -->

@@ -2,8 +2,8 @@
 	import {Route} from 'svelte-routing';
 	import { slide  } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
+import About from './pages/About.svelte';
     export  let routes;
-	export let bg;
 
 </script>
 
@@ -13,4 +13,6 @@
                 <svelte:component this={singleRoute.component} ></svelte:component>
             </div>
         </Route>
+			<Route component="{About}"></Route>
+
 {/each}	
