@@ -1,13 +1,29 @@
 <script>
 	import { fly } from 'svelte/transition';
 </script>
-<div class="tile is-ancestor">
+
+<div class="tile is-ancestor about">
 	<div class="tile is-parent " transition:fly="{{x: 200, duration: 900, delay:600}}">
-		<div class="tile is-child box">
-			<p class="title">Three</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
-			<p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor.</p>
-			<p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non semper leo.</p>
+		<div class="tile is-child box notification is-primary">
+			<p class="title">About the author</p>
+			<blockquote>
+				Mi chiamo Alexandru e sono un Junior Front-End Developer. Ho creato questo sito come sfida, per espandere le 
+				mie conoscenze e skills nel mondo dello Web Development e un giorno spero di diventare un bravo Full-Stack 
+				Web Developer.
+				Per ora il mio obiettivo è padroneggiare quanto piu possibile le tecnologie Front-End per poi iniziare a creare
+				delle basi solide nello sviluppo Back-End (devo ancora decidere con quale linguaggio iniziare, forse sempre in JavaScript 
+				o PHP).
+			</blockquote>
+		</div>
+	</div>
+	<div class="tile is-parent " transition:fly="{{x: 200, duration: 900, delay:600}}">
+		<div class="tile is-child box notification is-danger">
+			<p class="title">Other info</p>
+			<blockquote>
+				Sono appasionato d'informatica, in modo speciale del gaming e mi piace informarmi del mondo tech in generale.
+				Quando voglio staccarmi dal monitor, trovo rifugio nella musica o nella lettura, cosi posso staccare completamente 
+				il cervello e ripartire con idee fresche.
+			</blockquote>
 		</div>
 	</div>
 </div>

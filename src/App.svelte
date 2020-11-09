@@ -6,18 +6,21 @@
 	import BurgerMenu from './components/hero/BurgerMenu.svelte'
 	import HeroLinks from './components/hero/HeroLinks.svelte';
 	import { onMount } from 'svelte';
+	import { fly, slide } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
 	export let url = "";
 	let isBurgerMenuVisible = false;
 	onMount(() =>{
-			navigate("/", { replace: false })
+			// navigate("/", { replace: false })
 		} 
 		);
-		
+	let y;
 		// location.replace("/")
 </script>
+	<svelte:window bind:scrollY={y}/>
 <Router url={url}>
 	<!-- START Hero section -->
-	<section class="hero nasty-bg is-medium">
+	<section class="hero nasty-bg is-medium" transition:slide>
 		<div class="hero-head">
 			<BurgerMenu {routes} {isBurgerMenuVisible}></BurgerMenu>
 		</div>
@@ -31,17 +34,23 @@
 			</div>
 		</div>
 		<!-- Hero footer: will stick at the bottom -->
-		<div class="hero-foot">
+		<div class="hero-foot pages">
 			<HeroLinks {routes}></HeroLinks>
 		</div>
 	</section>
 	<!-- END Hero section -->
 
 	<!-- START Main section -->
-	<section class="section">
+	<section class="section ">
 		<div class="container">
 			<PageRoutes {routes}></PageRoutes>
 		</div>
+
+		<!-- svelte-ignore a11y-missing-attribute -->
+		<!-- <button class="button to-top-btn center-items icon-chevron-up" >
+			<span class="icon-chevron-up"></span>
+			<i class="icon-chevron-up"></i>
+		</button> -->
 	</section>
 	<!-- END Main section -->
 
