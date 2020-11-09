@@ -9,7 +9,7 @@
 	export let url = "";
 	let isBurgerMenuVisible = false;
 	onMount(() =>{
-			// navigate("/", { replace: false })
+			navigate("/", { replace: false })
 		} 
 		);
 		
