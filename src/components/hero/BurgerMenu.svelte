@@ -15,13 +15,12 @@
                 <span style="background-color: white"></span>
             </span>
         </div>
-        <div  id="navbarMenuHeroA" style="opacity: 0.4" class="navbar-menu { isBurgerMenuVisible ? 'is-active' : ''}" 
-                    transition:slide="{{x:200, duration: 500}}">
+        <div  id="navbarMenuHeroA" class="navbar-menu burger-bg { isBurgerMenuVisible ? 'is-active' : ''}">
             <div class="navbar-end">
                 {#each routes as singleRoute }
-                    <span>
+                    <span class="">
                         <a href="{singleRoute.path}" use:link  
-                                class="navbar-item is-active animate-text is-size-5" 
+                                class="navbar-item is-active burger-links  burger-bg is-size-5" 
                                 on:click={() => isBurgerMenuVisible = !isBurgerMenuVisible}
                                 >
                             {singleRoute.name}
