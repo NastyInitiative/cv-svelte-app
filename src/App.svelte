@@ -63,10 +63,10 @@
 		</p>
 		The awesome tech I used: 
 		<div>
-			<a href="https://bulma.io" target="_blank">
+			<a href="https://bulma.io" target="_blank" rel="noreferrer">
 				<img src="/logos/made-with-bulma--dark.png" alt="Made with Bulma" width="128" height="24">
 			</a>
-			<a href="https://svelte.dev/" target="_blank" class="mt-5">
+			<a href="https://svelte.dev/" target="_blank" class="mt-5" rel="noreferrer">
 				<img src="/logos/svelte-horizontal.svg" alt="Made with Svelte" width="128" height="24">
 			</a>
 		</div>
