@@ -25,7 +25,7 @@
 		<div class="hero-body" >
 			<div class="container center-items is-mobile">
 				<div class="columns">
-					<div class="column">
+					<div class="column p-0">
 						<HeroMain></HeroMain>
 					</div>
 				</div>
