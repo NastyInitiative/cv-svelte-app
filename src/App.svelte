@@ -5,26 +5,24 @@
 	import PageRoutes from  './components/PageRoutes.svelte';
 	import BurgerMenu from './components/hero/BurgerMenu.svelte'
 	import HeroLinks from './components/hero/HeroLinks.svelte';
-	import { onMount } from 'svelte';
-	import { fly, slide } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
+	import { fly, slide, fade } from 'svelte/transition';
+    import * as animateScroll from 'svelte-scrollto';
+	import { quadInOut } from 'svelte/easing';
+	function coolScrool(elem) {
+        animateScroll.scrollTo({element: elem, duration: 1400, easing: quadInOut })
+    }
 	export let url = "";
 	let isBurgerMenuVisible = false;
-	onMount(() =>{
-			// navigate("/", { replace: false })
-		} 
-		);
 	let y;
-		// location.replace("/")
 </script>
-	<svelte:window bind:scrollY={y}/>
+<svelte:window bind:scrollY={y}/>
 <Router url={url}>
 	<!-- START Hero section -->
-	<section class="hero nasty-bg is-medium" transition:slide>
-		<div class="hero-head">
+	<section class="hero nasty-bg is-fullheight" transition:slide>
+		<div class="hero-head hero-main" id="hero-main">
 			<BurgerMenu {routes} {isBurgerMenuVisible}></BurgerMenu>
 		</div>
-		<div class="hero-body">
+		<div class="hero-body" >
 			<div class="container center-items">
 				<div class="columns">
 					<div class="column is-12" >
@@ -34,8 +32,10 @@
 			</div>
 		</div>
 		<!-- Hero footer: will stick at the bottom -->
-		<div class="hero-foot pages">
-			<HeroLinks {routes}></HeroLinks>
+		<div class="hero-foot ">
+			<div class="container">
+				<HeroLinks {routes}></HeroLinks>
+			</div>
 		</div>
 	</section>
 	<!-- END Hero section -->
@@ -45,12 +45,12 @@
 		<div class="container">
 			<PageRoutes {routes}></PageRoutes>
 		</div>
-
 		<!-- svelte-ignore a11y-missing-attribute -->
-		<!-- <button class="button to-top-btn center-items icon-chevron-up" >
-			<span class="icon-chevron-up"></span>
-			<i class="icon-chevron-up"></i>
-		</button> -->
+		{#if y > 200}
+			<a href="#hero-main" class="button to-top-btn center-items" on:click={() => coolScrool('#hero-main')} transition:fade="{{duration: 500}}">
+				<img src="/icons/expand_less-white-18dp.svg" />
+			</a>
+		{/if}
 	</section>
 	<!-- END Main section -->
 

@@ -29,21 +29,6 @@ $chevron-up : url("/icons/expand_less-white-18dp.svg");
     }
 }
 
-@keyframes resizeAnimation {
-    0% {
-        transform: scaleY(0);
-        transform-origin: bottom;
-    } 
-    100% {
-        transform: scaleY(1);
-        transform-origin: top;
-    }
-}
-
-.animate-scroll {
-    animation: resizeAnimation 5s linear 2s  ease-in-out;
-}
-
 .animate-text {
     color: $white !important;
     &:hover {
@@ -149,8 +134,15 @@ a:hover {
     border-radius: 35px;
     width: 50px;
     height: 50px;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.226);
     font-size: 24px;
+    background-image: $chevron-up !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 30px;
+    &:hover{
+        background-color: $orange !important;
+    }
 }
 
 .icon-chevron-up {

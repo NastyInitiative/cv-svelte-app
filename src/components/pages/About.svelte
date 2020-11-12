@@ -3,7 +3,7 @@
 </script>
 
 <div class="tile is-ancestor about">
-	<div class="tile is-parent " transition:fly="{{x: 200, duration: 900, delay:600}}">
+	<div class="tile is-parent " transition:fly="{{x: 200, duration: 900}}">
 		<div class="tile is-child box notification is-primary">
 			<p class="title">About the author</p>
 			<blockquote>
