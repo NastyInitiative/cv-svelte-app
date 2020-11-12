@@ -9,7 +9,7 @@
 <div class="is-primary center-items" >
 <!-- svelte-ignore a11y-invalid-attribute -->
 	<a href="" class="animate-text">
-		<p class="is-size-2" >🅽🅰🆂🆃🆈 🅸🅽🅸🆃🅸🅰🆃🅸🆅🅴</p> 
+		<p class="main-text is-size-2-desktop is-size-4-mobile is-size-3-tablet" >🅽🅰🆂🆃🆈 🅸🅽🅸🆃🅸🅰🆃🅸🆅🅴</p> 
 	</a>
 
 </div>

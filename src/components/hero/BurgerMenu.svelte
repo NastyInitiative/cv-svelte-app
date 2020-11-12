@@ -3,6 +3,14 @@
     import { slide } from 'svelte/transition';
     export let isBurgerMenuVisible;
     export let routes;
+    import * as animateScroll from 'svelte-scrollto';
+import { quadInOut } from 'svelte/easing';
+
+    function coolScrool(elem) {
+        isBurgerMenuVisible = !isBurgerMenuVisible
+        animateScroll.scrollTo({element: elem, duration: 1400, easing:quadInOut })
+    }
+
 </script>
 
 <nav class="navbar">
@@ -21,7 +29,7 @@
                     <span class="">
                         <a href="{singleRoute.path}" use:link  
                                 class="navbar-item is-active burger-links  burger-bg is-size-5" 
-                                on:click={() => isBurgerMenuVisible = !isBurgerMenuVisible}
+                                on:click={() => coolScrool('.pages')}
                                 >
                             {singleRoute.name}
                         </a>

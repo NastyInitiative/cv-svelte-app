@@ -18,21 +18,21 @@
 <svelte:window bind:scrollY={y}/>
 <Router url={url}>
 	<!-- START Hero section -->
-	<section class="hero nasty-bg is-fullheight" transition:slide>
+	<section class="hero nasty-bg is-fullheight">
 		<div class="hero-head hero-main" id="hero-main">
 			<BurgerMenu {routes} {isBurgerMenuVisible}></BurgerMenu>
 		</div>
 		<div class="hero-body" >
-			<div class="container center-items">
+			<div class="container center-items is-mobile">
 				<div class="columns">
-					<div class="column is-12" >
+					<div class="column">
 						<HeroMain></HeroMain>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- Hero footer: will stick at the bottom -->
-		<div class="hero-foot ">
+		<div class="hero-foot pages">
 			<div class="container">
 				<HeroLinks {routes}></HeroLinks>
 			</div>
