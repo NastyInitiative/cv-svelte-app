@@ -7,7 +7,7 @@
 	import HeroLinks from './components/hero/HeroLinks.svelte';
 	import { fly, slide, fade } from 'svelte/transition';
     import * as animateScroll from 'svelte-scrollto';
-	import { quadInOut } from 'svelte/easing';
+	import { quadInOut, quintOut } from 'svelte/easing';
 	function coolScrool(elem) {
         animateScroll.scrollTo({element: elem, duration: 1400, easing: quadInOut })
     }
@@ -47,7 +47,7 @@
 		</div>
 		<!-- svelte-ignore a11y-missing-attribute -->
 		{#if y > 200}
-			<a href="#hero-main" class="button to-top-btn center-items" on:click={() => coolScrool('#hero-main')} transition:fade="{{duration: 500}}">
+			<a href="#hero-main" class="button to-top-btn center-items" on:click={() => coolScrool('#hero-main')} transition:slide="{{duration: 500, easing:quintOut}}">
 				<img src="/icons/expand_less-white-18dp.svg" />
 			</a>
 		{/if}

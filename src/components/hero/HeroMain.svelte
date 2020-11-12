@@ -8,8 +8,10 @@
 
 <div class="is-primary center-items" >
 <!-- svelte-ignore a11y-invalid-attribute -->
-	<a href="" class="animate-text">
-		<p class="main-text is-size-2-desktop is-size-3-mobile is-size-3-tablet" >🅽🅰🆂🆃🆈 🅸🅽🅸🆃🅸🅰🆃🅸🆅🅴</p> 
-	</a>
+	<p class="animate-border">
+		<a href="" class="animate-text animate-border">
+			<p class="main-text is-size-2-desktop is-size-3-mobile is-size-3-tablet" >🅽🅰🆂🆃🆈 🅸🅽🅸🆃🅸🅰🆃🅸🆅🅴</p> 
+		</a>
+	</p>
 
 </div>
