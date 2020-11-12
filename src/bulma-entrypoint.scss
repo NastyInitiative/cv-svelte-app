@@ -37,22 +37,6 @@ $chevron-up : url("/icons/expand_less-white-18dp.svg");
     }
 }
 
-.hide {
-    display: none;
-}
-
-@media screen and  ( max-width: 1024px) {
-    .is-on-desktop {
-        display: none;
-    }
-}
-
-@media (min-width: 1024px) {
-    #navbarMenuHeroA {
-        display: none ;
-    }
-}
-
 .center-items {
     display: flex;
     justify-content: center;
@@ -158,6 +142,9 @@ a:hover {
     color: $white !important;
     &:active{
         color: $orange !important;
+    }
+    @media screen and (max-width: 768px){
+        text-align: center;
     }
 }
 

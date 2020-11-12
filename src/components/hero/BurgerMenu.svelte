@@ -13,9 +13,9 @@ import { quadInOut } from 'svelte/easing';
 
 </script>
 
-<nav class="navbar">
+<nav class="navbar ">
     <div class="container">
-        <div class="navbar-brand">
+        <div class="navbar-brand is-hidden-desktop is-hidden-tablet">
             <span class="navbar-burger burger {isBurgerMenuVisible ? 'is-active' : ''}" 
                         on:click={() => isBurgerMenuVisible = !isBurgerMenuVisible} >
                 <span style="background-color: white"></span>
@@ -23,7 +23,7 @@ import { quadInOut } from 'svelte/easing';
                 <span style="background-color: white"></span>
             </span>
         </div>
-        <div  id="navbarMenuHeroA" class="navbar-menu burger-bg { isBurgerMenuVisible ? 'is-active' : ''}">
+        <div  id="navbarMenuHeroA" class="navbar-menu burger-bg is-hidden-desktop is-hidden-tablet { isBurgerMenuVisible ? 'is-active' : ''}">
             <div class="navbar-end">
                 {#each routes as singleRoute }
                     <span class="">

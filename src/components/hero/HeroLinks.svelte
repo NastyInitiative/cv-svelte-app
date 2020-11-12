@@ -11,7 +11,7 @@
 
 </script>
 
-<nav class="tabs is-boxed is-fullwidth is-on-desktop " transition:fly="{{y:200, duration: 1000,delay:1000, easing:quintIn}}">
+<nav class="tabs is-boxed is-fullwidth is-hidden-mobile " transition:fly="{{y:200, duration: 1000,delay:1000, easing:quintIn}}">
     <div class="container">
         <ul>
             {#each routes as singleRoute}
