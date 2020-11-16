@@ -6,12 +6,16 @@
 </script>
 
 
-<div class="is-primary center-items" >
-<!-- svelte-ignore a11y-invalid-attribute -->
+<!-- <div>
+	<div class="columns">
+		<div class="column">
+			<p>Ciao, sono</p>
+		</div>
+	</div>
 	<p class="animate-border">
-		<a href="" class="animate-text animate-border">
-			<p class="main-text is-size-2-desktop is-size-3-mobile is-size-3-tablet" >🅽🅰🆂🆃🆈 🅸🅽🅸🆃🅸🅰🆃🅸🆅🅴</p> 
+		<a target="_blank" rel="noreferrer" href="https://linkedin.com/in/ionut-alexandru-pacuraru-4390b8182" class="animate-text show-title">
+			<p class="main-text is-size-2-desktop is-size-3-mobile is-size-3-tablet" >Pacuraru Ionut Alexandru</p> 
 		</a>
 	</p>
-
-</div>
+</div> -->
+<!-- <p class="main-text is-size-2-desktop is-size-3-mobile is-size-3-tablet" >🅽🅰🆂🆃🆈 🅸🅽🅸🆃🅸🅰🆃🅸🆅🅴</p>  -->

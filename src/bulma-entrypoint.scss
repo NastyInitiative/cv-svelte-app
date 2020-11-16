@@ -1,4 +1,6 @@
 @charset 'utf-8';
+$progress-bar-background-color: hsl(0, 0%, 21%);
+$progress-border-radius:2px;	
 @import 'bulma/bulma.sass';
  
 $stripe-bg: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cGF0aCBkPSJNLTIgMTBMMTAgLTJaTTEwIDZMNiAxMFpNLTIgMkwyIC0yIiBzdHJva2U9IiMyMjIiIHN0cm9rZS13aWR0aD0iNC41Ij48L3BhdGg+Cjwvc3ZnPg=="),url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgyPSIxIiB5Mj0iMSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGMTkiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMENGIj48L3N0b3A+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiPjwvcmVjdD4KPC9zdmc+");
@@ -20,21 +22,25 @@ $chevron-up : url("/icons/expand_less-white-18dp.svg");
     &:hover::before {
         transform: scaleX(1);
         transform-origin: left;
-        background-color: $orange;
+        background-color: $danger;
     }
     &:hover::after {
         transform: scaleX(1);
         transform-origin: right;
-        background-color: $orange;
+        background-color: $danger;
     }
 }
 
 .animate-text {
     color: $white !important;
     &:hover {
-        color: $orange !important;
+        color: $danger !important;
         transition: color 250ms ease-in-out;
     }
+}
+
+.text-underline {
+   text-decoration: underline $primary solid;
 }
 
 .center-items {
@@ -56,13 +62,16 @@ a:hover {
 
 .nasty-bg {
     color: white;
-    background: $stripe-bg;
+    background: url('/images/Subtle-Prism.svg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .skills-bg{
     background: $dot-bg;
 }
-
 
 .progress.is-purple {
 
@@ -82,6 +91,7 @@ a:hover {
 .progress.is-orange {
 
     &::-webkit-progress-value {
+        color: #000;
         background-color: rgba($color: #E64A19, $alpha: 1.0);
     }
 
@@ -110,7 +120,6 @@ a:hover {
 }
 
 .to-top-btn {
-    // display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -125,7 +134,8 @@ a:hover {
     background-position: center;
     background-size: 30px 30px;
     &:hover{
-        background-color: $orange !important;
+        background-color: $danger !important;
+
     }
 }
 
@@ -141,7 +151,7 @@ a:hover {
 .burger-links {
     color: $white !important;
     &:active{
-        color: $orange !important;
+        color: $danger !important;
     }
     @media screen and (max-width: 768px){
         text-align: center;
