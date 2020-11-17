@@ -20,13 +20,10 @@
 	<!-- START Hero section -->
 	<section class="hero nasty-bg is-fullheight">
 		<div class="hero-head hero-main" id="hero-main">
-			<!-- <span class="pages"></span> -->
-			<div class="container">
-				<HeroLinks {routes}></HeroLinks>
-			</div>
+			<HeroLinks {routes}></HeroLinks>
 			<BurgerMenu {routes} {isBurgerMenuVisible}></BurgerMenu>
 		</div>
-		<div class="hero-body" >
+		<div class="hero-body p-0">
 			<div class="container is-mobile">
 				<HeroMain></HeroMain>
 				<section class="section">
@@ -53,7 +50,6 @@
 		</div> -->
 	</section>
 	<!-- END Hero section -->
-
 	<!-- START Main section -->
 	<!-- <section class="section ">
 		<div class="container">
@@ -69,7 +65,6 @@
 		{/if}
 	</section> -->
 	<!-- END Main section -->
-
 </Router>
 
 <footer class="footer  has-background-dark has-text-white-bis">
