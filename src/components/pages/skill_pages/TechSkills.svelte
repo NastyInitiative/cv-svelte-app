@@ -12,7 +12,7 @@
     ];
 </script>
 <div class="tile is-child box m-10 has-background-dark has-text-white-bis" transition:slide="{{ duration: 900, delay: 800}}">
-    <p class="title has-text-white-bis">Software Skills</p>
+    <p class="title has-text-white-bis">Tech Skills</p>
     {#each programmingSkills as singleSkill }
         <span class="is-clearfix is-clipped">
             <p>{singleSkill.tech} <span class="is-pulled-right">{singleSkill.level}%</span></p>

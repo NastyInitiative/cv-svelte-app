@@ -31,6 +31,10 @@ $chevron-up : url("/icons/expand_less-white-18dp.svg");
     }
 }
 
+.break-word {
+    word-break: break-all;
+}
+
 .animate-text {
     color: $white !important;
     &:hover {

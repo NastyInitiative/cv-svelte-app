@@ -3,6 +3,7 @@ import Skills from './components/pages/Skills.svelte';
 import Experiences from './components/pages/Experiences.svelte';
 import Education from './components/pages/Education.svelte'
 import About from './components/pages/About.svelte';
+import Contacts from './components/pages/Contacts.svelte';
 
 const routes = [
     {name: 'Home', path: '/',component: Home},
@@ -10,6 +11,7 @@ const routes = [
     {name: 'Skills', path: 'skills', component: Skills},
     {name: 'Education', path: 'education', component: Education},
     {name: 'Experiences', path: 'experiences', component: Experiences},
+    {name: 'Contacts', path: 'contacts', component: Contacts}
 ];
 
 export default routes;
