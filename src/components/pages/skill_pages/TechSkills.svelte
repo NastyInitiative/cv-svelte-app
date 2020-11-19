@@ -1,5 +1,12 @@
 <script>
+
+    import { onMount } from 'svelte';
+    import { quintOut } from 'svelte/easing';
+
+    import { tweened } from 'svelte/motion';
+
     import { fly, slide } from 'svelte/transition';
+    const progress = tweened(0)
     let programmingSkills = [
 		{tech: 'HTML', level: '80', color: 'is-lightorange'},
 		{tech: 'CSS', level: '65', color: 'is-info'},
@@ -10,14 +17,31 @@
 		{tech: 'Svelte', level: '40', color: 'is-orange'},
 		{tech: 'Angular', level: '40', color: 'is-danger'}
     ];
+    let programmingSkillsTweened = [
+		{tech: 'HTML', level: $progress, color: 'is-lightorange'},
+		// {tech: 'CSS', level: '65', color: 'is-info'},
+		// {tech: 'JavaScript', level: '70', color: 'is-warning'},
+		// {tech: 'jQuery', level: '70', color: 'is-link'},
+		// {tech: 'BootStrap', level: '65', color: 'is-purple'},
+		// {tech: 'Bulma', level: '50', color: 'is-primary'},
+		// {tech: 'Svelte', level: '40', color: 'is-orange'},
+		// {tech: 'Angular', level: '40', color: 'is-danger'}
+    ];
+
+    onMount(() => {
+        programmingSkills.forEach((skill) => {
+            console.log(progress.set(Number(skill.level)));
+
+        })
+    })
 </script>
-<div class="tile is-child box m-10 has-background-dark has-text-white-bis" transition:slide="{{ duration: 900, delay: 800}}">
+<div class="tile is-child box m-10 has-background-dark has-text-white-bis" transition:fly="{{y:200, duration: 800, delay: 500, easing: quintOut}}">
     <p class="title has-text-white-bis">Tech Skills</p>
     {#each programmingSkills as singleSkill }
         <span class="is-clearfix is-clipped">
             <p>{singleSkill.tech} <span class="is-pulled-right">{singleSkill.level}%</span></p>
         </span>
-        <progress class="progress is-small is-primary has-background-dark" value="{singleSkill.level}" max="100">{singleSkill.level}</progress>
+        <progress class="progress is-small is-primary has-background-dark" max="100" value="{singleSkill.level}">{singleSkill.level}</progress>
     {/each}
     <div class="has-text-white-bis" transition:slide="{{ duration: 900, delay: 500}}">
         <div class="mb-4">
@@ -30,7 +54,7 @@
             <p> Linux: Ubuntu, Xubuntu </p>
         </div>
     </div>
-    <div class="mt-5" transition:slide="{{ duration: 900, delay:800}}">
+    <div class="mt-5" transition:fly="{{y: 200, duration: 800, delay:800, easing: quintOut}}">
         <div class="mb-4">
             <h3 class="has-text-centered">			
                 Software di emulazione di macchine virtuali conosciuti

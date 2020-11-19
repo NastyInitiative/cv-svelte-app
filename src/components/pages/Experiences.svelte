@@ -4,7 +4,7 @@
 </script>
 <p class="is-size-2-desktop is-size-3-mobile is-size-3-tablet">Experiences</p>
 <div class="tile is-ancestor">
-	<div class="tile is-parent" transition:fly="{{y: 200, duration: 900, delay:600, easing: quintOut}}">
+	<div class="tile is-parent" transition:fly="{{y: 200, duration: 900, delay:500, easing: quintOut}}">
 		<div class="tile is-child box has-background-dark has-text-white-bis">
 			<p class="title has-text-white-bis">Key To Business</p>
 			<div class="p-3">
@@ -34,7 +34,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="tile is-parent" transition:fly="{{y: 200, duration: 900, delay:600, easing: quintOut}}">
+	<div class="tile is-parent" transition:fly="{{y: 200, duration: 900, delay:800, easing: quintOut}}">
 		<div class="tile is-child box has-background-dark has-text-white-bis">
 			<p class="title has-text-white-bis">Key To Business</p>
 			<div class="p-3">
@@ -67,7 +67,7 @@
 	</div>
 </div>
 <div class="tile is-ancestor">
-	<div class="tile is-parent is-6" transition:fly="{{y: 200, duration: 900, delay:600, easing: quintOut}}">
+	<div class="tile is-parent is-6" transition:fly="{{y: 200, duration: 900, delay:1100, easing: quintOut}}">
 		<div class="tile is-child box has-background-dark has-text-white-bis">
 			<p class="title has-text-white-bis">Immobiliare.it Spa</p>
 			<div class="p-3">

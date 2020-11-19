@@ -4,7 +4,7 @@
 </script>
 <p class="is-size-2-desktop is-size-3-mobile is-size-3-tablet">Contacts</p>
 <div class="tile is-ancestor">
-    <div class="tile is-4 is-parent">
+    <div class="tile is-4 is-parent" transition:fly="{{y:200, duration: 800, delay: 500, easing: quintOut}}">
         <div class="tile is-child box has-background-dark">
             <div>
                 <img src="/icons/linkedin-icon-blue.svg" alt="" width="96" height="96">
@@ -17,20 +17,20 @@
             </p>
         </div>
     </div>
-    <div class="tile is-4 is-parent">
+    <div class="tile is-4 is-parent" transition:fly="{{y:200, duration: 800, delay: 800, easing: quintOut}}">
         <div class="tile is-child box has-background-dark">
             <div>
                 <img src="/icons/github-icon-blue.svg" alt="" width="96" height="96">
             </div>
             <p class="has-text-primary">Profile:</p>
             <p>
-                <a class="has-text-white-bis break-word" target="_blank" rel="noreferrer" href="https://github.com/NastyInitiative/portfolio-svelte-app">
-                    https://github.com/NastyInitiative/portfolio-svelte-app
+                <a class="has-text-white-bis break-word" target="_blank" rel="noreferrer" href="https://github.com/NastyInitiative/">
+                    https://github.com/NastyInitiative/
                 </a>
             </p>
         </div>
     </div>
-    <div class="tile is-4 is-parent">
+    <div class="tile is-4 is-parent" transition:fly="{{y:200, duration: 800, delay: 1100, easing: quintOut}}">
         <div class="tile is-child box has-background-dark">
             <div>
                 <img src="/icons/email-icon-blue.svg" alt="" width="96" height="96 ">

@@ -4,7 +4,7 @@
 </script>
 <p class="is-size-2-desktop is-size-3-mobile is-size-3-tablet">Education</p>
 <div class="tile is-ancestor">
-    <div class="tile is-parent is-6" transition:fly="{{y: 200, duration: 900, delay:600, easing: quintOut}}"> 
+    <div class="tile is-parent is-6" transition:fly="{{y: 200, duration: 800, delay:600, easing: quintOut}}"> 
         <div class="tile is-child box has-background-dark has-text-white-bis">
             <p class="title has-text-white-bis">Java e Android Developer</p>
             <div class="columns">
@@ -105,7 +105,7 @@
             </div>
         </div>
     </div>
-    <div class="tile is-parent is-6 vertical" transition:fly="{{y: -200, duration: 900, delay:600, easing: quintOut}}">
+    <div class="tile is-parent is-6 vertical" transition:fly="{{y: 200, duration: 800, delay:800, easing: quintOut}}">
         <div class="tile is-child box has-background-dark has-text-white-bis">
             <p class="title has-text-white-bis">Perito Informatico</p>
             <div class="columns">
