@@ -1,26 +1,30 @@
 <script>
-	import { Router, navigate } from 'svelte-routing';
+	import { Router } from 'svelte-routing';
 	import routes from './component-routes';
 	import HeroMain from './components/hero/HeroMain.svelte';
 	import PageRoutes from  './components/PageRoutes.svelte';
 	import BurgerMenu from './components/hero/BurgerMenu.svelte'
 	import HeroLinks from './components/hero/HeroLinks.svelte';
-	import { fly, slide, fade } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
     import * as animateScroll from 'svelte-scrollto';
 	import { quadInOut, quintOut } from 'svelte/easing';
+	let y;
+	export let url = "";
+	let isBurgerMenuVisible = false;
 	function coolScroll(elem) {
         animateScroll.scrollTo({element: elem, duration: 1400, easing: quadInOut })
     }
-	export let url = "";
-	let isBurgerMenuVisible = false;
-	let y;
 </script>
 <svelte:window bind:scrollY={y}/>
 <Router url={url}>
 	<!-- START Hero section -->
 	<section class="hero nasty-bg is-fullheight">
 		<div class="hero-head hero-main" id="hero-main">
-			<HeroLinks {routes}></HeroLinks>
+			<div class="columns is-centered">
+				<div class="column is-8 ">
+					<HeroLinks {routes}></HeroLinks>
+				</div>
+			</div>
 			<BurgerMenu {routes} {isBurgerMenuVisible}></BurgerMenu>
 		</div>
 		<div class="hero-body p-0">
@@ -41,30 +45,7 @@
 				</section>
 			</div>
 		</div>
-		<!-- Hero footer: will stick at the bottom -->
-		<!-- <span class="pages"></span>
-		<div class="hero-foot">
-			<div class="container">
-				<HeroLinks {routes}></HeroLinks>
-			</div>
-		</div> -->
 	</section>
-	<!-- END Hero section -->
-	<!-- START Main section -->
-	<!-- <section class="section ">
-		<div class="container">
-			<PageRoutes {routes}></PageRoutes>
-		</div> -->
-		<!-- svelte-ignore a11y-missing-attribute -->
-		<!-- {#if y > 200}
-			<a href="#hero-main" class="button to-top-btn center-items" 
-				on:click={() => coolScroll('#hero-main')} 
-				transition:slide="{{duration: 500, easing:quintOut}}">
-				<img src="/icons/expand_less-white-18dp.svg" />
-			</a>
-		{/if}
-	</section> -->
-	<!-- END Main section -->
 </Router>
 
 <footer class="footer  has-background-dark has-text-white-bis">

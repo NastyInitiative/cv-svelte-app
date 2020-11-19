@@ -1,10 +1,6 @@
 <script>
-
-    import { onMount } from 'svelte';
     import { quintOut } from 'svelte/easing';
-
     import { tweened } from 'svelte/motion';
-
     import { fly, slide } from 'svelte/transition';
     const progress = tweened(0)
     let programmingSkills = [
@@ -17,23 +13,6 @@
 		{tech: 'Svelte', level: '40', color: 'is-orange'},
 		{tech: 'Angular', level: '40', color: 'is-danger'}
     ];
-    let programmingSkillsTweened = [
-		{tech: 'HTML', level: $progress, color: 'is-lightorange'},
-		// {tech: 'CSS', level: '65', color: 'is-info'},
-		// {tech: 'JavaScript', level: '70', color: 'is-warning'},
-		// {tech: 'jQuery', level: '70', color: 'is-link'},
-		// {tech: 'BootStrap', level: '65', color: 'is-purple'},
-		// {tech: 'Bulma', level: '50', color: 'is-primary'},
-		// {tech: 'Svelte', level: '40', color: 'is-orange'},
-		// {tech: 'Angular', level: '40', color: 'is-danger'}
-    ];
-
-    onMount(() => {
-        programmingSkills.forEach((skill) => {
-            console.log(progress.set(Number(skill.level)));
-
-        })
-    })
 </script>
 <div class="tile is-child box m-10 has-background-dark has-text-white-bis" transition:fly="{{y:200, duration: 800, delay: 500, easing: quintOut}}">
     <p class="title has-text-white-bis">Tech Skills</p>
@@ -41,7 +20,7 @@
         <span class="is-clearfix is-clipped">
             <p>{singleSkill.tech} <span class="is-pulled-right">{singleSkill.level}%</span></p>
         </span>
-        <progress class="progress is-small is-primary has-background-dark" max="100" value="{singleSkill.level}">{singleSkill.level}</progress>
+        <progress class="progress is-small is-primary has-background-dark" max="100" value="{singleSkill.level}" transition:fly="{{x: -(singleSkill.level * 10), duration: 2000}}">{singleSkill.level}</progress>
     {/each}
     <div class="has-text-white-bis" transition:slide="{{ duration: 900, delay: 500}}">
         <div class="mb-4">
