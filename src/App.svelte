@@ -20,10 +20,8 @@
 	<!-- START Hero section -->
 	<section class="hero nasty-bg is-fullheight">
 		<div class="hero-head hero-main" id="hero-main">
-			<div class="columns is-centered">
-				<div class="column is-8 ">
-					<HeroLinks {routes}></HeroLinks>
-				</div>
+			<div class="m-auto vw-70">
+				<HeroLinks {routes}></HeroLinks>
 			</div>
 			<BurgerMenu {routes} {isBurgerMenuVisible}></BurgerMenu>
 		</div>

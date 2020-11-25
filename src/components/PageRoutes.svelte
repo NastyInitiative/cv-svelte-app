@@ -7,7 +7,7 @@ import { quintOut } from 'svelte/easing';
 
 {#each routes as singleRoute}
     <Route path={singleRoute.path} >
-        <div transition:slide="{{duration: 1000, easing: quintOut}}">
+        <div>
             <svelte:component this={singleRoute.component} ></svelte:component>
         </div>
     </Route>

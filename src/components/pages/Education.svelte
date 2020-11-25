@@ -2,10 +2,10 @@
     import { quintOut } from 'svelte/easing';
     import { fly } from 'svelte/transition';
 </script>
-<p class="is-size-2-desktop is-size-3-mobile is-size-3-tablet">Education</p>
+<p class="is-size-2-desktop is-size-3-mobile is-size-3-tablet" in:fly={{y: 100, delay: 200,duration: 800, easing:quintOut}}>Education</p>
 <div class="tile is-ancestor">
-    <div class="tile is-parent is-6" transition:fly="{{y: 200, duration: 800, delay:600, easing: quintOut}}"> 
-        <div class="tile is-child box has-background-dark has-text-white-bis">
+    <div class="tile is-parent is-6"> 
+        <div class="tile is-child box has-background-dark has-text-white-bis" in:fly={{y: 100, delay: 400,duration: 1000, easing:quintOut}}>
             <p class="title has-text-white-bis">Java e Android Developer</p>
             <div class="columns">
                 <div class="column">
@@ -105,7 +105,7 @@
             </div>
         </div>
     </div>
-    <div class="tile is-parent is-6 vertical" transition:fly="{{y: 200, duration: 800, delay:800, easing: quintOut}}">
+    <div class="tile is-parent is-6 vertical" in:fly={{y: 100, delay: 600,duration: 800, easing:quintOut}}>
         <div class="tile is-child box has-background-dark has-text-white-bis">
             <p class="title has-text-white-bis">Perito Informatico</p>
             <div class="columns">

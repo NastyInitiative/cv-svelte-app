@@ -13,16 +13,19 @@
 		{tech: 'Svelte', level: '40', color: 'is-orange'},
 		{tech: 'Angular', level: '40', color: 'is-danger'}
     ];
+    
+ 
+    // $: tweenedValue.set(variableSkillLevel)
 </script>
-<div class="tile is-child box m-10 has-background-dark has-text-white-bis" transition:fly="{{y:200, duration: 800, delay: 500, easing: quintOut}}">
+<div class="tile is-child box m-10 has-background-dark has-text-white-bis" in:fly={{y: 100,duration: 800, delay: 400, easing:quintOut}}>
     <p class="title has-text-white-bis">Tech Skills</p>
     {#each programmingSkills as singleSkill }
         <span class="is-clearfix is-clipped">
             <p>{singleSkill.tech} <span class="is-pulled-right">{singleSkill.level}%</span></p>
         </span>
-        <progress class="progress is-small is-primary has-background-dark" max="100" value="{singleSkill.level}" transition:fly="{{x: -(singleSkill.level * 10), duration: 2000}}">{singleSkill.level}</progress>
+        <progress class="progress is-small is-primary has-background-dark" max="100" value="{singleSkill.level}">{singleSkill.level}</progress>
     {/each}
-    <div class="has-text-white-bis" transition:slide="{{ duration: 900, delay: 500}}">
+    <div class="has-text-white-bis" >
         <div class="mb-4">
             <h2 class="has-text-centered ">
                 Sistemi operativi conosciuti
@@ -33,7 +36,7 @@
             <p> Linux: Ubuntu, Xubuntu </p>
         </div>
     </div>
-    <div class="mt-5" transition:fly="{{y: 200, duration: 800, delay:800, easing: quintOut}}">
+    <div class="mt-5">
         <div class="mb-4">
             <h3 class="has-text-centered">			
                 Software di emulazione di macchine virtuali conosciuti

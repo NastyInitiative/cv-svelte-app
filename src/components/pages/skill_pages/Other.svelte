@@ -1,8 +1,10 @@
 <script>
+import { quintOut } from 'svelte/easing';
+
     import { fly, slide } from 'svelte/transition';
 </script>
 
-<div class="tile is-child box has-background-dark" transition:fly="{{y: 200, duration: 900, delay:600}}">
+<div class="tile is-child box has-background-dark"in:fly={{y: 100,duration: 800, delay: 600, easing:quintOut}}>
 	<p class="title has-text-white-bis">Soft Skills</p>
 	<div class="has-text-centered has-text-white">
 		<div class="mb-4">
@@ -35,7 +37,7 @@
 		</div>
 	</div>
 </div>
-<div class="tile is-child box has-background-dark" transition:fly="{{y: 200, duration: 900, delay:600}}">
+<div class="tile is-child box has-background-dark"in:fly={{y: 100,duration: 800, delay: 800 ,easing:quintOut}}>
 	<p class="title has-text-white-bis">Language Skills</p>
 	<div class="box has-text-centered has-background-danger has-text-white-bis p-2">
 		<p>Rumeno - madre lingua</p>
