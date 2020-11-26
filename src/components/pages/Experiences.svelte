@@ -1,48 +1,58 @@
 <script>
 	import { quintOut } from 'svelte/easing';
 	import { fly } from 'svelte/transition';
+import CardGroup from '../../shared/CardGroup.svelte';
 </script>
 <p class="is-size-2-desktop is-size-3-mobile is-size-3-tablet" in:fly={{y: 100, delay: 200,duration: 800, easing:quintOut}}>Experiences</p>
 <div class="tile is-ancestor">
 	<div class="tile is-parent" in:fly={{y: 100, delay: 400,duration: 800, easing:quintOut}}>
 		<div class="tile is-child box has-background-dark has-text-white-bis">
 			<p class="title has-text-white-bis">Key To Business</p>
-			<div class="p-3">
-				<p>Front End Junior Developer</p>
-				<p>09/06/2020 – alla data attuale</p>
-			</div>
-			<div class="box has-background-primary has-text-white-bis has-text-centered ">
-				<blockquote>
+
+			<CardGroup padding={'p-2'} isBoxed={false} hasPrimaryBg={false} hasTextCentered={false} hasTwoColumns={false}>
+				<span slot="firstParagraph">
+					<p>Front End Junior Developer</p>
+					<p>09/06/2020 – alla data attuale</p>
+				</span>
+			</CardGroup>
+
+			<CardGroup padding={'p-3'} hasTwoColumns={false}>
+ 				<blockquote slot="firstParagraph">
 					Attualmente sto lavorando sul progetto FEU ( Front-End Unico ) 
 					di Poste dove ho il compito di creare ed implementare componenti e funzionalita.
 				</blockquote>
-			</div>
-			<div class="has-text-centered has-text-white-bis">
-				<div class="mb-4">
-					<p>Technologie utilizzate</p>
-				</div>
-				<div class="box has-background-primary has-text-white-bis p-3">
-					<p>JavaScript</p>
-				</div>
-				<div class="box has-background-primary has-text-white-bis p-3">
-					<p>JQuery</p>
-				</div>
-				<div class="box has-background-primary has-text-white-bis p-3">
-					<p>Bootstrap</p>
-				</div>
+			</CardGroup>
 
-			</div>
+			<CardGroup padding={'pb-0 pt-2'} margin={'mb-0'} isBoxed={false} hasPrimaryBg={false} hasTwoColumns={false}>
+				<p slot="firstParagraph">Technologie utilizzate</p>
+			</CardGroup>
+
+			<CardGroup padding={'p-3'} hasTwoColumns={false}>
+				<p slot="firstParagraph">JavaScript</p>
+			</CardGroup>
+
+			<CardGroup padding={'p-3'} hasTwoColumns={false}>
+				<p slot="firstParagraph">JQuery</p>
+			</CardGroup>
+
+			<CardGroup padding={'p-3'} hasTwoColumns={false}>
+				<p slot="firstParagraph">Bootstrap</p>
+			</CardGroup>
 		</div>
 	</div>
 	<div class="tile is-parent" in:fly={{y: 100, delay: 600,duration: 800, easing:quintOut}}>
 		<div class="tile is-child box has-background-dark has-text-white-bis">
 			<p class="title has-text-white-bis">Key To Business</p>
-			<div class="p-3">
-				<p>Angular Junior Developer</p>
-				<p>03/03/2020 - 09/06/2020</p>
-			</div>
-			<div class="box has-background-danger has-text-white-bis has-text-centered ">
-				<blockquote>
+
+			<CardGroup padding={'p-2'} isBoxed={false} hasPrimaryBg={false} hasTextCentered={false} hasTwoColumns={false}>
+				<span slot="firstParagraph">
+					<p>Angular Junior Developer</p>
+					<p>03/03/2020 - 09/06/2020</p>
+				</span>
+			</CardGroup>
+
+			<CardGroup padding={'p-3'} hasTwoColumns={false} hasPrimaryBg={false} hasDangerBg={true}>
+				<blockquote slot="firstParagraph" >
 					Ho svolto un corso di formazione in Angular presso Key to Business, 
 					dove ho potuto apprendere ed applicare i concetti studiati partecipando ad un progetto interno. 
 					Nel progetto ho utilizzato i ReactiveForm, anche in maniera dinamica, aggiungendo e 
@@ -54,51 +64,54 @@
 					Per questo progetto è stata utilizza la libreria UI Angular Material con la quale 
 					abbia sviluppato l'interfaccia dell'applicazione. 
 				</blockquote>
-			</div>
-			<div class="has-text-centered has-text-white-bis">
-				<div class="mb-4">
-					<p>Technologie utilizzate</p>
-				</div>
-				<div class="box has-background-danger has-text-white-bis p-3">
-					<p>Angular 9</p>
-				</div>
-			</div>
+			</CardGroup>
+			<CardGroup padding={'pb-0 pt-2'} margin={'mb-0'} isBoxed={false} hasPrimaryBg={false} hasTwoColumns={false}>
+				<p slot="firstParagraph">Technologie utilizzate</p>
+			</CardGroup>
+
+			<CardGroup padding={'p-3'} hasTwoColumns={false} hasPrimaryBg={false} hasDangerBg={true}>
+				<p slot="firstParagraph">Angular 9</p>
+			</CardGroup>
 		</div>
 	</div>
 </div>
 <div class="tile is-ancestor">
-	<div class="tile is-parent is-6">
+	<div class="tile is-parent is-6" in:fly={{y: 100, delay: 800,duration: 800, easing:quintOut}}>
 		<div class="tile is-child box has-background-dark has-text-white-bis">
 			<p class="title has-text-white-bis">Immobiliare.it Spa</p>
-			<div class="p-3">
-				<p>Front End Junior Developer</p>
-				<p>05/02/2019 – 02/08/2019</p>
-			</div>
-			<div class="box has-background-primary has-text-white-bis has-text-centered ">
-				<blockquote>
+			
+			<CardGroup padding={'p-2'} isBoxed={false} hasPrimaryBg={false} hasTextCentered={false} hasTwoColumns={false}>
+				<span slot="firstParagraph">
+					<p>Front End Junior Developer</p>
+					<p>09/06/2020 – alla data attuale</p>
+				</span>
+			</CardGroup>
+
+			<CardGroup padding={'p-3'} hasTwoColumns={false}>
+				<blockquote slot="firstParagraph">
 					Ho svolto uno stage di 6 mesi nella sede di Roma di Immobiliare.it, 
 					suddiviso in 5 mesi di formazione sulle tecnologie usate per il sviluppo Front End 
 					ed un mese di nei team, dove ho svolto la mansione di web developer incaricato con 
 					la creazione di pagine web statiche usando i concetti studiati in precedenza. 
 				</blockquote>
-			</div>
-			<div class="has-text-white-bis">
-				<div class="mb-4 has-text-centered">
-					<p>Technologie studiate e applicate</p>
-				</div>
-				<div class="box has-background-primary has-text-white-bis p-3">
-					<p>HTML - dalle basi a HTML5</p>
-				</div>
-				<div class="box has-background-primary has-text-white-bis p-3">
-					<p>CSS - Flexbox, Selectors, SASS, BEM</p>
-				</div>
-				<div class="box has-background-primary has-text-white-bis p-3">
-					<p>JavaScript - basi, Callbacks, Scope, Functional Programming</p>
-				</div>
-				<div class="box has-background-primary has-text-white-bis p-3">
-					<p>Tool & Framework - basi Bash, Git, NPM, basi NodeJS</p>
-				</div>
-			</div>
+			</CardGroup>
+			   
+			<CardGroup padding={'p-3'} hasTwoColumns={false}>
+				<p slot="firstParagraph">HTML - dalle basi a HTML5</p>
+			</CardGroup>
+
+			<CardGroup padding={'p-3'} hasTwoColumns={false}>
+				<p slot="firstParagraph">CSS - Flexbox, Selectors, SASS, BEM</p>
+			</CardGroup>
+
+			<CardGroup padding={'p-3'} hasTwoColumns={false}>
+				<p slot="firstParagraph">JavaScript - basi, Callbacks, Scope, Functional Programming</p>
+			</CardGroup>
+
+			<CardGroup padding={'p-3'} hasTwoColumns={false}>
+				<p slot="firstParagraph">Tool & Framework - basi Bash, Git, NPM, basi NodeJS</p>
+			</CardGroup>
+	
 		</div>
 	</div>
 </div>

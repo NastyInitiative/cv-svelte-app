@@ -1,29 +1,22 @@
 <script>
     import { quintOut } from 'svelte/easing';
-    import { tweened } from 'svelte/motion';
-    import { fly, slide } from 'svelte/transition';
-    const progress = tweened(0)
+    import { fly} from 'svelte/transition';
+    import ProgressBar from '../../../shared/ProgressBar.svelte';
     let programmingSkills = [
-		{tech: 'HTML', level: '80', color: 'is-lightorange'},
-		{tech: 'CSS', level: '65', color: 'is-info'},
-		{tech: 'JavaScript', level: '70', color: 'is-warning'},
-		{tech: 'jQuery', level: '70', color: 'is-link'},
-		{tech: 'BootStrap', level: '65', color: 'is-purple'},
-		{tech: 'Bulma', level: '50', color: 'is-primary'},
-		{tech: 'Svelte', level: '40', color: 'is-orange'},
-		{tech: 'Angular', level: '40', color: 'is-danger'}
+		{tech: 'HTML', level: 80, color: 'is-lightorange'},
+		{tech: 'CSS', level: 65, color: 'is-info'},
+		{tech: 'JavaScript', level: 70, color: 'is-warning'},
+		{tech: 'jQuery', level: 70, color: 'is-link'},
+		{tech: 'BootStrap', level: 65, color: 'is-purple'},
+		{tech: 'Bulma', level: 50, color: 'is-primary'},
+		{tech: 'Svelte', level: 40, color: 'is-orange'},
+		{tech: 'Angular', level: 40, color: 'is-danger'}
     ];
-    
- 
-    // $: tweenedValue.set(variableSkillLevel)
 </script>
 <div class="tile is-child box m-10 has-background-dark has-text-white-bis" in:fly={{y: 100,duration: 800, delay: 400, easing:quintOut}}>
     <p class="title has-text-white-bis">Tech Skills</p>
     {#each programmingSkills as singleSkill }
-        <span class="is-clearfix is-clipped">
-            <p>{singleSkill.tech} <span class="is-pulled-right">{singleSkill.level}%</span></p>
-        </span>
-        <progress class="progress is-small is-primary has-background-dark" max="100" value="{singleSkill.level}">{singleSkill.level}</progress>
+        <ProgressBar level={singleSkill.level}>{singleSkill.tech}</ProgressBar>
     {/each}
     <div class="has-text-white-bis" >
         <div class="mb-4">
@@ -54,4 +47,3 @@
         </div>
     </div>
 </div>
-
