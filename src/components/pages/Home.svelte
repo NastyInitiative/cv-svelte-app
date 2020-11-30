@@ -18,9 +18,8 @@
 		<div class="tile is-parent " >
 			<div class="tile is-child box notification is-dark">
 				<blockquote>
-					Sono appassionato d'informatica, in modo speciale del gaming e del mondo tech in generale.
-					Quando voglio staccarmi dal monitor, trovo rifugio nella musica o nella lettura, cosi posso rinfrescare
-					la mente e ripartire con idee fresche.
+					Sono appasionato del mondo informatico, piu nello specifico, di quello del gaming, programmazione e hardware PC.
+					Quando voglio staccarmi dal PC, trovo conforto e relax nella musica e lettura;
 				</blockquote>
 			</div>
 		</div>
