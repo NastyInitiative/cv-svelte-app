@@ -19,7 +19,7 @@
 			<div class="tile is-child box notification is-dark">
 				<blockquote>
 					Sono appasionato del mondo informatico, piu nello specifico, di quello del gaming, programmazione e hardware PC.
-					Quando voglio staccarmi dal PC, trovo conforto e relax nella musica e lettura;
+					Quando voglio staccarmi dal PC, trovo conforto e relax nella musica e lettura.
 				</blockquote>
 			</div>
 		</div>
