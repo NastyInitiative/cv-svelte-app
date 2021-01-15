@@ -9,8 +9,9 @@
 		{tech: 'jQuery', level: 70, color: 'is-link'},
 		{tech: 'BootStrap', level: 65, color: 'is-purple'},
 		{tech: 'Bulma', level: 50, color: 'is-primary'},
-		{tech: 'Svelte', level: 40, color: 'is-orange'},
-		{tech: 'Angular', level: 40, color: 'is-danger'}
+		{tech: 'Svelte', level: 60, color: 'is-orange'},
+		{tech: 'Angular', level: 40, color: 'is-danger'},
+		{tech: 'Vue', level: 80, color: 'is-primary'}
     ];
 </script>
 <div class="tile is-child box m-10 has-background-dark has-text-white-bis" in:fly={{y: 100,duration: 800, delay: 400, easing:quintOut}}>

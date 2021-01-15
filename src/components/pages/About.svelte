@@ -8,11 +8,11 @@
 		<div class="tile is-parent " >
 			<div class="tile is-child box notification is-primary">
 				<blockquote>
-					Ho creato questo sito come ercizio, per espandere le 
-					mie conoscenze e skills nel mondo dello Web Development e spero di diventare un bravo Full-Stack 
+					Ho creato questo sito come esercizio e sfida, per espandere le 
+					mie conoscenze e skills nel mondo dello Web Development e spero di diventare un eccellente Full-Stack 
 					Web Developer.
 					Il mio obiettivo è padroneggiare il piu possibile le tecnologie Front-End per poi iniziare a porre
-					delle basi solide nello sviluppo Back-End (ancora da decidere con quale linguaggio iniziare, forse sempre in JavaScript 
+					delle basi solide nello sviluppo Back-End (ancora da decidere con quale linguaggio iniziare, forse sempre in JavaScript/TypeScript 
 					o PHP ecc. ).
 				</blockquote>
 			</div>

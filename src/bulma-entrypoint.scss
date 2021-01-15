@@ -25,7 +25,7 @@ $chevron-up : url("/icons/expand_less-white-18dp.svg");
     display: inline-block;
     color: #000;
     text-decoration: none;
-    &::before, &::after {
+    &::before {
         content: '';
         display: block;
         height: 2px;
@@ -39,11 +39,17 @@ $chevron-up : url("/icons/expand_less-white-18dp.svg");
         transform-origin: left;
         background-color: $danger;
     }
-    &:hover::after {
-        transform: scaleX(1);
-        transform-origin: right;
-        background-color: $danger;
-    }
+    // &:hover::after {
+    //     transform: scaleX(1);
+    //     transform-origin: right;
+    //     background-color: $danger;
+    // }
+}
+
+.active-link {
+    color: $danger;
+    text-decoration: none;
+    box-shadow: inset $danger 0px -2px 0px 0px;
 }
 
 .animate-text {

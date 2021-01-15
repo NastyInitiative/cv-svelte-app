@@ -4,6 +4,11 @@
     import { fly } from 'svelte/transition';
     import * as animateScroll from 'svelte-scrollto';
     export let routes;
+    let current="/";
+    function handleClick(elem, activeLink) {
+        coolScrool(elem);
+        current = activeLink;
+    }
     function coolScrool(elem) {
         animateScroll.scrollTo({element: elem, duration: 1400, easing:quadInOut })
     }
@@ -13,7 +18,7 @@
     <ul>
         {#each routes as singleRoute}
             <li class="animate-border pages">
-                <a class="animate-text" href="{singleRoute.path}" use:link on:click={() => coolScrool('.pages')}>{singleRoute.name}</a>
+                <a class="animate-text" class:active-link={current === singleRoute.path}  href="{singleRoute.path}" use:link on:click={() => handleClick('.pages', singleRoute.path)}>{singleRoute.name}</a>
             </li>
         {/each}
     </ul>

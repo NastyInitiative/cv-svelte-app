@@ -1,14 +1,12 @@
 <script>
 	import { Route } from 'svelte-routing';
-import { quintOut } from 'svelte/easing';
-	import { slide  } from 'svelte/transition';
     export  let routes;
 </script>
 
 {#each routes as singleRoute}
     <Route path={singleRoute.path} >
-        <div>
-            <svelte:component this={singleRoute.component} ></svelte:component>
-        </div>
+        <svelte:component this={singleRoute.component} ></svelte:component>
+        <!-- <div>
+        </div> -->
     </Route>
 {/each}	
