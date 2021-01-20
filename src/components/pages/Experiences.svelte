@@ -94,7 +94,7 @@
 			<CardGroup padding={'p-2'} isBoxed={false} hasPrimaryBg={false} hasTextCentered={false} hasTwoCards={false}>
 				<span slot="firstCard">
 					<p>Front End Junior Developer</p>
-					<p>09/06/2020 – alla data attuale</p>
+					<p>05/02/2019 – 02/08/2019</p>
 				</span>
 			</CardGroup>
 
