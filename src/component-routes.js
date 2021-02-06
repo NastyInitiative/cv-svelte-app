@@ -7,11 +7,11 @@ import Contacts from './components/pages/Contacts.svelte';
 
 const routes = [
     {name: 'Home', path: '/',component: Home},
-    {name: 'About', path: 'about',component: About},
-    {name: 'Skills', path: 'skills', component: Skills},
-    {name: 'Education', path: 'education', component: Education},
-    {name: 'Experiences', path: 'experiences', component: Experiences},
-    {name: 'Contacts', path: 'contacts', component: Contacts}
+    {name: 'About', path: '/about',component: About},
+    {name: 'Skills', path: '/skills', component: Skills},
+    {name: 'Education', path: '/education', component: Education},
+    {name: 'Experiences', path: '/experiences', component: Experiences},
+    {name: 'Contacts', path: '/contacts', component: Contacts}
 ];
 
 export default routes;
