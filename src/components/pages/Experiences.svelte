@@ -45,10 +45,6 @@
 				<p slot="firstCard">VueJS</p>
 				<p slot="secondCard">NodeJS</p>
 			</CardGroup>
-			<CardGroup>
-				<p slot="firstCard">VueJS</p>
-				<p slot="secondCard">NodeJS</p>
-			</CardGroup>
 		</div>
 	</div>
 	<div class="tile is-parent" in:fly={{y: 100, delay: 600,duration: 800, easing:quintOut}}>
