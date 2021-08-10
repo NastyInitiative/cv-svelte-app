@@ -2,6 +2,40 @@
     import { quintOut } from 'svelte/easing';
     import { fly } from 'svelte/transition';
     import CardGroup from '../../shared/CardGroup.svelte';
+    let cardConfig = {
+        data: {
+            firstEducation: {
+                cardTitleData:{
+                    period: '17/09/2018–14/12/2018',
+                    location: 'Centro Elis, Roma (Italia)'
+                },
+                firstCardData: [
+                    'Object-Oriented Analysis and Design Using UML',
+                    'Basi di dati e SQL',
+                    'Apache Hadoop',
+                    'Apache Kafka',
+                    'Front-End Web Development',
+                    'Self Marketing',
+                    'Stress Management',
+                    'Public Speaking',
+                ],
+                secondCardData: [
+                    'Java SE8 Fundamentals',
+                    'Apache Cassandra',
+                    'Apache Spark',
+                    'Android',
+                    'Team Building',
+                    'Time Management',
+                    'Comunicazione Efficace',
+                ]
+            }
+        },
+        config: {
+            cardTitleConfig: {
+
+            }
+        }
+    };
 </script>
 <p class="is-size-2-desktop is-size-3-mobile is-size-3-tablet" in:fly={{y: 100, delay: 200,duration: 800, easing:quintOut}}>Education</p>
 <div class="tile is-ancestor">
@@ -10,8 +44,8 @@
             <p class="title has-text-white-bis">Java e Android Developer</p>
             <CardGroup isBoxed={false} hasPrimaryBg={false} hasTwoCards={false} hasTextCentered={false}>
                 <span slot="firstCard"> 
-                    <p >17/09/2018–14/12/2018</p>
-                    <p >Centro Elis, Roma (Italia)</p>
+                    <p>17/09/2018–14/12/2018</p>
+                    <p>Centro Elis, Roma (Italia)</p>
                 </span>
             </CardGroup>
             <CardGroup>
@@ -56,19 +90,19 @@
                     <p>Istituto Tecnico Commerciale Vicenzo Arangio Ruiz, Roma (Italia)</p>
                 </span>
             </CardGroup>
-            <CardGroup padding={'p-5'} hasPrimaryBg={false} hasTwoCards={false} hasDangerBg={true} hasPaddingSmall={false}>
+            <CardGroup padding={'p-5'} hasPrimaryBg={false} hasTwoCards={false} hasDangerBg={true}>
                 <p slot="firstCard">SQL</p>
             </CardGroup>
-            <CardGroup padding={'p-5'} hasPrimaryBg={false} hasTwoCards={false} hasDangerBg={true} hasPaddingSmall={false}>
+            <CardGroup padding={'p-5'} hasPrimaryBg={false} hasTwoCards={false} hasDangerBg={true}>
                 <p slot="firstCard">PHP</p>
             </CardGroup>
-            <CardGroup padding={'p-5'} hasPrimaryBg={false} hasTwoCards={false} hasDangerBg={true} hasPaddingSmall={false}>
+            <CardGroup padding={'p-5'} hasPrimaryBg={false} hasTwoCards={false} hasDangerBg={true}>
                 <p slot="firstCard">Componentistica PC</p>
             </CardGroup>
-            <CardGroup padding={'p-5'} hasPrimaryBg={false} hasTwoCards={false} hasDangerBg={true} hasPaddingSmall={false}>
+            <CardGroup padding={'p-5'} hasPrimaryBg={false} hasTwoCards={false} hasDangerBg={true}>
                 <p slot="firstCard">Reti</p>
             </CardGroup>
-            <CardGroup padding={'p-5'} hasPrimaryBg={false} hasTwoCards={false} hasDangerBg={true} hasPaddingSmall={false}>
+            <CardGroup padding={'p-5'} hasPrimaryBg={false} hasTwoCards={false} hasDangerBg={true}>
                 <p slot="firstCard">Le principali minacce nella cybersecurity</p>
             </CardGroup>
         </div>

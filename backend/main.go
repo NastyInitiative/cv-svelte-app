@@ -8,18 +8,18 @@ import (
 	"time"
 )
 
+const port = "5000"
+
 func main() {
 	psLog := log.New(os.Stdout, "::: portfolio-svelte-app ::: ", log.LstdFlags)
-	psServeMux := http.NewServeMux()
-	psServeMux.Handle("/", http.FileServer(http.Dir("../public")))
+	http.Handle("/", http.FileServer(http.Dir("../public")))
 	server := &http.Server{
-		Addr:         ":5000",
-		Handler:      psServeMux,
+		Addr:         port,
 		IdleTimeout:  120 * time.Second,
 		ReadTimeout:  1 * time.Second,
 		WriteTimeout: 1 * time.Second,
 	}
-	psLog.Printf("::: Starting app on port %d ::: ", 5000)
+	psLog.Printf("::: Starting app on port %v ::: ", port)
 	server.ListenAndServe()
 	timeOutContext, _ := context.WithTimeout(context.Background(), 30*time.Second)
 	server.Shutdown(timeOutContext)
