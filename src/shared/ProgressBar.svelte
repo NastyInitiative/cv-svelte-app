@@ -12,7 +12,7 @@
 
 <span class="is-clearfix is-clipped">
     <p>
-        
+        <slot></slot>
         <span class="is-pulled-right">{level}%</span>
     </p>
 </span>

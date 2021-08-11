@@ -24,31 +24,34 @@
 </script>
 <div class="tile is-child box m-10 has-background-dark has-text-white-bis" in:fly={{y: 100,duration: 800, delay: 400, easing:quintOut}}>
     <p class="title has-text-white-bis">Tech Skills</p>
-    <!-- {#each programmingSkills as singleSkill }
+    {#each programmingSkills as singleSkill }
         <ProgressBar level={singleSkill.level}>{singleSkill.tech}</ProgressBar>
-    {/each} -->
-    <div class="has-text-black-bis columns is-flex  is-justify-content-center is-flex-wrap-wrap is-justify-content-space-around"  >
+    {/each}
+    <!-- <div class="has-text-black-bis columns is-flex  is-justify-content-center is-flex-wrap-wrap is-justify-content-space-around"  >
         {#each programmingSkills as singleSkill }
             <div style="padding: 20px;" class="is-6 is-12-mobile is-align-content-center">
                 <div class="has-text-centered has-text-white-bis pb-3"><p>{singleSkill.tech}</p></div>
                 <ProgressCircle level={singleSkill.level} levelColor={singleSkill.color}></ProgressCircle>
             </div>
         {/each}
-    </div>
+    </div> -->
     <div class="has-text-white-bis" >
         <div class="mb-4 pt-4">
             <h2 class="has-text-centered ">
                 Sistemi operativi conosciuti
             </h2>
         </div>
-        <div class="has-text-black-bis columns is-flex  is-justify-content-center is-flex-wrap-wrap is-justify-content-space-around"  >
+        {#each os as singleOs }
+            <ProgressBar level={singleOs.level}>{singleOs.os}</ProgressBar>
+        {/each}
+        <!-- <div class="has-text-black-bis columns is-flex  is-justify-content-center is-flex-wrap-wrap is-justify-content-space-around"  >
             {#each os as singleOs }
                 <div style="padding: 20px;" class="is-6 is-12-mobile is-align-content-center">
                     <div class="has-text-centered has-text-white-bis pb-3"><p>{singleOs.os}</p> </div>
                     <ProgressCircle level={singleOs.level} levelColor={singleOs.color}> </ProgressCircle>
                 </div>
             {/each}
-        </div>
+        </div> -->
     </div>
     <div class="mt-5">
         <div class="mb-4">
