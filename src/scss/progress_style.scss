@@ -4,6 +4,13 @@
     border-radius: 5px;
 }
 
+.progress-dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: $primary;
+}
+
 .skill {
     width: 120px;
     height: 120px;
