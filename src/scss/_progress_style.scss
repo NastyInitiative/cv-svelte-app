@@ -1,8 +1,15 @@
-@import 'bulma/bulma.sass';
+.progress-bar-container{
+    // border: 1px $primary solid;
+    // border-radius: 5px;
+    // height: 18px;
+    // margin: 0 0 0 0;
+}
+
 .progress-bar {
-    height: 20px;
+    height: 10px;
     background: $primary;
     border-radius: 5px;
+    // box-shadow: inset 0px 2.8px 5px -2px black;
 }
 
 .progress-dot {

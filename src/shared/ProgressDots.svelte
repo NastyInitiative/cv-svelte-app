@@ -8,14 +8,21 @@
         delay: level * 10
     });
     $: tweenedLevel.set(level);
+
+    let numberOfDots = [];
+    for(let i=0; i<level; i++){
+        numberOfDots.push(level)
+    }
 </script>
 
 <span class="is-clearfix is-clipped">
     <p>
         <slot></slot>
-        <span class="is-pulled-right">{level}%</span>
+        <!-- <span class="is-pulled-right">{level}%</span> -->
     </p>
 </span>
-<div class="progress-bar-container ">
-    <div class="progress-bar mb-5 mt-1" style="width:{$tweenedLevel}%"></div>
+<div class="is-flex is-justify-content-center is-flex-direction-row m-0 p-2">
+    {#each numberOfDots as level }
+        <div class="progress-dot mb-5 mt-1 m-1"></div>
+    {/each}
 </div>
