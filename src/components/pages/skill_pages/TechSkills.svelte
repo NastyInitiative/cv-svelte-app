@@ -41,6 +41,9 @@
                 Sistemi operativi conosciuti
             </h2>
         </div>
+        <!-- {#each os as singleOs }
+            <ProgressBar level={singleOs.level}>{singleOs.os}</ProgressBar>
+        {/each} -->
         <div class="has-text-black-bis columns is-flex  is-justify-content-center is-flex-wrap-wrap is-justify-content-space-around"  >
             {#each os as singleOs }
                 <div style="padding: 20px;" class="is-6 is-12-mobile is-align-content-center">
