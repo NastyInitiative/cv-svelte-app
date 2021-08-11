@@ -34,7 +34,7 @@
 					</div>
 					<!-- svelte-ignore a11y-missing-attribute -->
 					{#if y > 200}
-						<a href="#hero-main" class="button to-top-btn center-items" 
+						<a href="#hero-main" class="to-top-btn center-items" 
 							on:click={() => coolScroll('#hero-main')} 
 							transition:slide="{{duration: 500, easing:quintOut}}">
 							<img src="/icons/expand_less-white-18dp.svg" />
