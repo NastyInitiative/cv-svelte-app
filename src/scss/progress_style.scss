@@ -51,6 +51,18 @@ circle {
     0% {
         stroke-dashoffset: 312;
     }
+    25% {
+        stroke-dashoffset: 200;
+    }
+    50% {
+        stroke-dashoffset: 150;
+    }
+    75% {
+        stroke-dashoffset: 100;
+    }
+    100%{
+        stroke-dashoffset: 50;
+    }
 }
 
 svg {
