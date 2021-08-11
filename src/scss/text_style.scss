@@ -1,0 +1,32 @@
+.animate-border {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    &::before {
+        content: '';
+        display: block;
+        height: 2px;
+        background-color: white;
+        transform: scaleX(0);
+        transition: transform 480ms ease-in-out;
+    }
+
+    &:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
+        background-color: $danger;
+    }
+}
+
+.animate-text {
+    color: $white !important;
+    &:hover {
+        color: $danger !important;
+        transition: color 250ms ease-in-out;
+    }
+}
+
+.text-underline {
+    text-decoration: underline $primary solid;
+ }
+

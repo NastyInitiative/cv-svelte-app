@@ -1,0 +1,106 @@
+.progress-bar {
+    height: 20px;
+    background: $primary;
+    border-radius: 5px;
+}
+
+.skill {
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+.outer {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(71, 71, 71, 0.986);
+    padding: 20px;
+}
+
+.inner {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.15),
+                inset -4px -4px 6px -1px rgba(56, 56, 56, 0.7),
+                -0.5px -0.5px 0px rgba(56, 56, 56, 0.7),
+                0.5px 0.5px 0px rgba(0,0,0,0.15),
+                0px 12px 10px -10px rgba(0, 0, 0, 0.678);
+}
+
+.number-c {
+    font-weight: 600px;
+    color: $white;
+}
+
+circle {
+    fill: none;
+    // stroke: $primary;
+    stroke-width: 15px;
+    stroke-dasharray: 312;
+    animation: circle 2s linear forwards;
+}
+
+@keyframes circle {
+    0% {
+        stroke-dashoffset: 312;
+    }
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+//! UNUSED - still deciding what to do with them 
+.progress.is-purple {
+
+    &::-webkit-progress-value {
+        background-color: rgba($color: #512DA8, $alpha: 1.0);
+    }
+
+    &::-moz-progress-bar {
+        background-color: rgba($color: #512DA8, $alpha: 1.0)
+    }
+
+    &::-ms-fill {
+        background-color:rgba($color: #512DA8, $alpha: 1.0)
+    }
+}
+
+.progress.is-orange {
+
+    &::-webkit-progress-value {
+        color: #000;
+        background-color: rgba($color: #E64A19, $alpha: 1.0);
+    }
+
+    &::-moz-progress-bar {
+        background-color: rgba($color: #E64A19, $alpha: 1.0);
+    }
+
+    &::-ms-fill {
+        background-color:rgba($color: #E64A19, $alpha: 1.0);
+    }
+}
+
+.progress.is-lightorange {
+
+    &::-webkit-progress-value {
+        background-color: rgba($color: #FF9800, $alpha: 1.0);
+    }
+
+    &::-moz-progress-bar {
+        background-color: rgba($color: #FF9800, $alpha: 1.0);
+    }
+
+    &::-ms-fill {
+        background-color:rgba($color: #FF9800, $alpha: 1.0);
+    }
+}

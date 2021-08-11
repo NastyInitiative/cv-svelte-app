@@ -1,0 +1,25 @@
+$chevron-up : url("/icons/expand_less-white-18dp.svg");
+
+.to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border-radius: 35px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.226);
+    font-size: 24px;
+    background-image: $chevron-up !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 30px;
+    &:hover{
+        background-color: $danger !important;
+    }
+}
+
+.icon-chevron-up {
+    background-image: $chevron-up !important;
+    background-repeat: no-repeat;
+}
