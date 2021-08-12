@@ -6,7 +6,5 @@
 {#each routes as singleRoute}
     <Route path={singleRoute.path} >
         <svelte:component this={singleRoute.component} ></svelte:component>
-        <!-- <div>
-        </div> -->
     </Route>
 {/each}	
