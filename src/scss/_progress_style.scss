@@ -43,11 +43,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.15),
-                inset -4px -4px 6px -1px rgba(56, 56, 56, 0.7),
-                -0.5px -0.5px 0px rgba(56, 56, 56, 0.7),
-                0.5px 0.5px 0px rgba(0,0,0,0.15),
-                0px 12px 10px -10px rgba(0, 0, 0, 0.678);
+    // box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.15),
+    //             inset -4px -4px 6px -1px rgba(56, 56, 56, 0.7),
+    //             -0.5px -0.5px 0px rgba(56, 56, 56, 0.7),
+    //             0.5px 0.5px 0px rgba(0,0,0,0.15),
+    //             0px 12px 10px -10px rgba(0, 0, 0, 0.678);
 }
 
 .number-c {
@@ -58,7 +58,7 @@
 circle {
     fill: none;
     // stroke: $primary;
-    stroke-width: 15px;
+    stroke-width: 5px;
     stroke-dasharray: 312;
     animation: circle 2s linear forwards;
 }
