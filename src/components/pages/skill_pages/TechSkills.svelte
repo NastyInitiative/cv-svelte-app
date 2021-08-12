@@ -4,52 +4,29 @@
     import ProgressBar from '../../../shared/ProgressBar.svelte';
     import ProgressCircle from '../../../shared/ProgressCircle.svelte';
     import ProgressDots from '../../../shared/ProgressDots.svelte';
+    import Progress from '../../../shared/Progress.svelte';
     let programmingSkills = [
-		{tech: 'HTML', level: 80, color: '#00d1b2'},
-		{tech: 'CSS', level: 65, color: '#00d1b2'},
-		{tech: 'JavaScript', level: 70, color: '#00d1b2'},
-		{tech: 'jQuery', level: 80, color: '#00d1b2'},
-		{tech: 'BootStrap', level: 65, color: '#00d1b2'},
-		{tech: 'Bulma', level: 60, color: '#00d1b2'},
-		{tech: 'Svelte', level: 80, color: '#00d1b2'},
-		{tech: 'Angular', level: 40, color: '#00d1b2'},
-		{tech: 'Vue', level: 80, color: '#00d1b2'},
-		{tech: 'Go', level: 65, color: '#00d1b2'}
+		{item: 'HTML', level: 80, color: '#00d1b2'},
+		{item: 'CSS', level: 65, color: '#00d1b2'},
+		{item: 'JavaScript', level: 70, color: '#00d1b2'},
+		{item: 'jQuery', level: 80, color: '#00d1b2'},
+		{item: 'BootStrap', level: 65, color: '#00d1b2'},
+		{item: 'Bulma', level: 60, color: '#00d1b2'},
+		{item: 'Svelte', level: 80, color: '#00d1b2'},
+		{item: 'Angular', level: 40, color: '#00d1b2'},
+		{item: 'Vue', level: 80, color: '#00d1b2'},
+		{item: 'Go', level: 65, color: '#00d1b2'}
     ];
     let os = [
-        {os: 'Windows (7, 8, 10)', level: 80, color: '#00d1b2'},
-        {os: 'Linux (Ubuntu/Xubuntu)', level: 70, color: '#00d1b2'},
+        {item: 'Windows (7, 8, 10)', level: 80, color: '#00d1b2'},
+        {item: 'Linux (Ubuntu/Xubuntu)', level: 70, color: '#00d1b2'},
     ];
 
 
 </script>
 <div class="tile is-child box m-10 has-background-dark has-text-white-bis" in:fly={{y: 100,duration: 800, delay: 400, easing:quintOut}}>
     <p class="title has-text-white-bis">Tech Skills</p>
-    <!-- Progress Bar -->
-    <!-- {#each programmingSkills as singleSkill }
-        <ProgressBar level={singleSkill.level}>{singleSkill.tech}</ProgressBar>
-    {/each} -->
-
-    <!-- Progress Circle -->
-    <div class="has-text-black-bis columns is-flex  is-justify-content-center is-flex-wrap-wrap is-justify-content-space-around"  >
-        {#each programmingSkills as singleSkill }
-            <div style="padding: 20px;" class="is-6 is-12-mobile is-align-content-center">
-                <div class="has-text-centered has-text-white-bis pb-3"><p>{singleSkill.tech}</p></div>
-                <ProgressCircle level={singleSkill.level} levelColor={singleSkill.color}></ProgressCircle>
-            </div>
-        {/each}
-    </div>
-
-    <!-- Progress Dots -->
-    <!-- <div class="has-text-black-bis columns is-flex  is-justify-content-center is-flex-wrap-wrap is-justify-content-space-around"  >
-        {#each programmingSkills as singleSkill }
-            <div style="padding: 20px;" class="is-6 is-12-mobile is-align-content-center">
-                <div class="has-text-centered has-text-white-bis pb-3"><p>{singleSkill.tech}</p></div>
-                <ProgressDots level={singleSkill.level}></ProgressDots>
-            </div>
-        {/each}
-    </div> -->
-
+    <Progress progress={programmingSkills} ></Progress>
     
     <div class="has-text-white-bis" >
         <div class="mb-4 pt-4">
@@ -57,25 +34,7 @@
                 Sistemi operativi conosciuti
             </h2>
         </div>
-        <!-- {#each os as singleOs }
-            <ProgressBar level={singleOs.level}>{singleOs.os}</ProgressBar>
-        {/each} -->
-        <!-- <div class="has-text-black-bis columns is-flex  is-justify-content-center is-flex-wrap-wrap is-justify-content-space-around"  >
-            {#each os as singleOs }
-                <div style="padding: 20px;" class="is-6 is-12-mobile is-align-content-center">
-                    <div class="has-text-centered has-text-white-bis pb-3"><p>{singleOs.os}</p> </div>
-                    <ProgressDots level={singleOs.level}></ProgressDots>
-                </div>
-            {/each}
-        </div> -->
-        <div class="has-text-black-bis columns is-flex  is-justify-content-center is-flex-wrap-wrap is-justify-content-space-around"  >
-            {#each os as singleOs }
-                <div style="padding: 20px;" class="is-6 is-12-mobile is-align-content-center">
-                    <div class="has-text-centered has-text-white-bis pb-3"><p>{singleOs.os}</p> </div>
-                    <ProgressCircle level={singleOs.level} levelColor={singleOs.color}> </ProgressCircle>
-                </div>
-            {/each}
-        </div>
+        <Progress progress={os}></Progress>
     </div>
     <div class="mt-5">
         <div class="mb-4">
