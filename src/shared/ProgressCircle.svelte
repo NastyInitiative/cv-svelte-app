@@ -1,6 +1,7 @@
 <script>
     export let level;
     export let levelColor;
+    
     let skillPercentage = level;
     let counter = 0;
     setInterval(() => {
@@ -13,7 +14,7 @@
     }, 30);
     let circleLevel= 312 - 312 * level/100;
 </script> 
-<div class="skill m-auto">
+<div class="skill m-auto" >
     <div class="outer">
         <div class="inner">
             <div class="number-c">
