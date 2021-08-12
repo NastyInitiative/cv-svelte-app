@@ -19,7 +19,7 @@
             <div class="number-c">
                 {skillPercentage}
             </div>
-        </div>
+        </div>  
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="120px" height="120px">
         <circle style="stroke-dashoffset:{circleLevel}; stroke:{levelColor};" cx="60" cy="60" r="50" stroke-linecap="round" />
