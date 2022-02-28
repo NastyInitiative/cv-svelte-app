@@ -4,7 +4,8 @@ import { quintOut } from 'svelte/easing';
     import { fly, slide } from 'svelte/transition';
 </script>
 
-<div class="tile is-child box has-background-dark"in:fly={{y: 100,duration: 800, delay: 600, easing:quintOut}}>
+<!-- <div class="tile is-child box has-background-dark"in:fly={{y: 100,duration: 800, delay: 600, easing:quintOut}}> -->
+<div class="tile is-child box glass-bg"in:fly={{y: 100,duration: 800, delay: 600, easing:quintOut}}>
 	<p class="title has-text-white-bis">Soft Skills</p>
 	<div class="has-text-centered has-text-white">
 		<div class="mb-4">
@@ -29,6 +30,7 @@ import { quintOut } from 'svelte/easing';
 			</blockquote>
 		</div>
 		<div class="box has-background-danger has-text-white-bis p-3">
+		<!-- <div class="box glass-bg has-text-white-bis p-3 "> -->
 			<blockquote class="has-text-centered">
 				Capacità di problem solving acquisite durante il corso Java Developer ,dove ho avuto modo di
 				confrontarmi con diverse situazioni, le quali richiedevano l'individuazione del problema e la sua
@@ -37,7 +39,8 @@ import { quintOut } from 'svelte/easing';
 		</div>
 	</div>
 </div>
-<div class="tile is-child box has-background-dark"in:fly={{y: 100,duration: 800, delay: 800 ,easing:quintOut}}>
+<!-- <div class="tile is-child box has-background-dark"in:fly={{y: 100,duration: 800, delay: 800 ,easing:quintOut}}> -->
+<div class="tile is-child box glass-bg"in:fly={{y: 100,duration: 800, delay: 800 ,easing:quintOut}}>
 	<p class="title has-text-white-bis">Language Skills</p>
 	<div class="box has-text-centered has-background-danger has-text-white-bis p-2">
 		<p>Rumeno - madre lingua</p>
@@ -78,3 +81,10 @@ import { quintOut } from 'svelte/easing';
 	</div>
 </div>
 
+<style>
+	/* .glass-bg {
+		background-color: #36363610;
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+	} */
+</style>

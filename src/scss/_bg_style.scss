@@ -15,3 +15,9 @@
 .bulma-badge {
     background-image: url("/images/made-with-bulma--dark.png");
 }
+
+.glass-bg {
+    background-color: #3636367d;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}

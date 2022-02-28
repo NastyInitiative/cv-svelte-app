@@ -16,7 +16,7 @@
 	</div>
 	<div class="tile is-ancestor about" in:fly={{y: 30,duration: 600, delay: 800, easing:quintOut}}>
 		<div class="tile is-parent " >
-			<div class="tile is-child box notification is-dark">
+			<div class="tile is-child box notification glass-bg has-text-white-bis">
 				<blockquote>
 					Sono appasionato del mondo informatico, piu nello specifico, di quello del gaming, programmazione e hardware PC.
 					Quando voglio staccarmi dal PC, trovo conforto e relax nella musica e lettura.

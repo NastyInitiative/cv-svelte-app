@@ -2,11 +2,51 @@
 	import { quintOut } from 'svelte/easing';
 	import { fly } from 'svelte/transition';
 	import CardGroup from '../../shared/CardGroup.svelte';
+	import MultiCardGroups from '../../shared/MultiCardGroups.svelte';
+
+	let cardGroupConfig = {
+		data:{
+            cardTitleData:{
+                period: "",
+                location: ""
+            },
+            cardData: [
+                {
+                    firstCardData: "JavaScript",
+                    secondCardData: "HTML"
+                },
+                {
+                    firstCardData: "CSS",
+                    secondCardData: "JQuery"
+                },
+                {
+                    firstCardData: "Bootstrap",
+                    secondCardData: "Svelte"
+                },
+                {
+                    firstCardData: "VueJS",
+                    secondCardData: "NodeJS"
+                },
+            ],
+        },
+	};
+
+	let oneColData = [
+		"HTML - dalle basi a HTML5", 
+		"CSS - Flexbox, Selectors, SASS, BEM", 
+		"JavaScript - basi, Callbacks, Scope, Functional Programming", 
+		"Tool & Framework - basi Bash, Git, NPM, basi NodeJS"
+	];
+	let styleObj = {
+        hasTwoCards: false,
+        padding: "p-5"
+    };
 </script>
 <p class="is-size-2-desktop is-size-3-mobile is-size-3-tablet" in:fly={{y: 100, delay: 200,duration: 800, easing:quintOut}}>Experiences</p>
 <div class="tile is-ancestor">
 	<div class="tile is-parent" in:fly={{y: 100, delay: 400,duration: 800, easing:quintOut}}>
-		<div class="tile is-child box has-background-dark has-text-white-bis">
+		<!-- <div class="tile is-child box has-background-dark has-text-white-bis"> -->
+		<div class="tile is-child box glass-bg has-text-white-bis">
 			<p class="title has-text-white-bis">Key To Business</p>
 
 			<CardGroup padding={'p-2'} isBoxed={false} hasPrimaryBg={false} hasTextCentered={false} hasTwoCards={false}>
@@ -17,7 +57,7 @@
 			</CardGroup>
 
 			<CardGroup padding={'p-3'} hasTwoCards={false}>
- 				<blockquote slot="firstCard">
+				<blockquote slot="firstCard">
 					Attualmente sto lavorando sul progetto FEU ( Front-End Unico ) 
 					di Poste dove ho il compito di creare ed implementare componenti e funzionalita.
 				</blockquote>
@@ -27,28 +67,12 @@
 				<p slot="firstCard">Strumenti utilizzati</p>
 			</CardGroup>
 
-			<CardGroup>
-				<p slot="firstCard">JavaScript</p>
-				<p slot="secondCard">HTML</p>
-			</CardGroup>
-
-			<CardGroup>
-				<p slot="firstCard">CSS</p>
-				<p slot="secondCard">JQuery</p>
-			</CardGroup>
-
-			<CardGroup>
-				<p slot="firstCard">Bootstrap</p>
-				<p slot="secondCard">Svelte</p>
-			</CardGroup>
-			<CardGroup>
-				<p slot="firstCard">VueJS</p>
-				<p slot="secondCard">NodeJS</p>
-			</CardGroup>
+			<MultiCardGroups wrapperStyle={'p-3'} multiCardConfig={cardGroupConfig}/>
 		</div>
 	</div>
 	<div class="tile is-parent" in:fly={{y: 100, delay: 600,duration: 800, easing:quintOut}}>
-		<div class="tile is-child box has-background-dark has-text-white-bis">
+		<!-- <div class="tile is-child box has-background-dark has-text-white-bis"> -->
+		<div class="tile is-child box glass-bg has-text-white-bis">
 			<p class="title has-text-white-bis">Key To Business</p>
 
 			<CardGroup padding={'p-2'} isBoxed={false} hasPrimaryBg={false} hasTextCentered={false} hasTwoCards={false}>
@@ -84,10 +108,11 @@
 </div>
 <div class="tile is-ancestor">
 	<div class="tile is-parent is-6" in:fly={{y: 100, delay: 800,duration: 800, easing:quintOut}}>
-		<div class="tile is-child box has-background-dark has-text-white-bis">
+		<!-- <div class="tile is-child box has-background-dark has-text-white-bis"> -->
+		<div class="tile is-child box glass-bg has-text-white-bis">
 			<p class="title has-text-white-bis">Immobiliare.it Spa</p>
 			
-			<CardGroup padding={'p-2'} isBoxed={false} hasPrimaryBg={false} hasTextCentered={false} hasTwoCards={false}>
+			<CardGroup padding={'p-3'} isBoxed={false} hasPrimaryBg={false} hasTextCentered={false} hasTwoCards={false}>
 				<span slot="firstCard">
 					<p>Front End Junior Developer</p>
 					<p>05/02/2019 – 02/08/2019</p>
@@ -102,23 +127,7 @@
 					la creazione di pagine web statiche usando i concetti studiati in precedenza. 
 				</blockquote>
 			</CardGroup>
-			   
-			<CardGroup padding={'p-3'} hasTwoCards={false}>
-				<p slot="firstCard">HTML - dalle basi a HTML5</p>
-			</CardGroup>
-
-			<CardGroup padding={'p-3'} hasTwoCards={false}>
-				<p slot="firstCard">CSS - Flexbox, Selectors, SASS, BEM</p>
-			</CardGroup>
-
-			<CardGroup padding={'p-3'} hasTwoCards={false}>
-				<p slot="firstCard">JavaScript - basi, Callbacks, Scope, Functional Programming</p>
-			</CardGroup>
-
-			<CardGroup padding={'p-3'} hasTwoCards={false}>
-				<p slot="firstCard">Tool & Framework - basi Bash, Git, NPM, basi NodeJS</p>
-			</CardGroup>
-	
+			<MultiCardGroups wrapperStyle={'p-3'} data={oneColData} innerCardStyle={styleObj} />
 		</div>
 	</div>
 </div>

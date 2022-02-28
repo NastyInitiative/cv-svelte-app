@@ -15,7 +15,7 @@
 		{item: 'Svelte', level: 80, color: '#00d1b2'},
 		{item: 'Angular', level: 40, color: '#00d1b2'},
 		{item: 'Vue', level: 80, color: '#00d1b2'},
-		{item: 'Go', level: 65, color: '#00d1b2'}
+		{item: 'Go', level: 75, color: '#00d1b2'}
     ];
     let os = [
         {item: 'Windows (7, 8, 10)', level: 80, color: '#00d1b2'},
@@ -24,7 +24,8 @@
 
 
 </script>
-<div class="tile is-child box m-10 has-background-dark has-text-white-bis" in:fly={{y: 100,duration: 800, delay: 400, easing:quintOut}}>
+<!-- <div class="tile is-child box m-10 has-background-dark has-text-white-bis" in:fly={{y: 100,duration: 800, delay: 400, easing:quintOut}}> -->
+<div class="tile is-child box m-10 glass-bg has-text-white-bis" in:fly={{y: 100,duration: 800, delay: 400, easing:quintOut}}>
     <p class="title has-text-white-bis">Tech Skills</p>
     <Progress progress={programmingSkills} ></Progress>
     

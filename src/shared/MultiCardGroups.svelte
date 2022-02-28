@@ -1,48 +1,58 @@
 <script>
     import CardGroup from './CardGroup.svelte';
-    export const multiCardConfig={
+    import { quintOut } from 'svelte/easing';
+	import { fly } from 'svelte/transition';
+    import { onMount } from 'svelte';
+
+    export let wrapperStyle;
+    export let data = [];
+    export let multiCardConfig={
         data:{
             cardTitleData:{
                 period: "",
                 location: ""
             },
-            firstCardData: [],
-            secondCardData: []
-        },
-        config: {
-            cardTitleConfig:{
-                isBoxed:false,
-                hasTwoCards:false,
-                hasPrimaryBg:false,
-                hasTextCentered:false,
-            },
-            cardConfig:{
-                firstSlot:"",
-                secondSlot:"",
-                padding:"",
-                isBoxed:true,
-                hasTwoCards:true,
-                hasPrimaryBg:true,
-                hasDangerBg:false,
-                hasTextCentered:true,
-            }
-        },
+            cardData: [
+                {
+                    firstCardData: "",
+                    secondCardData: ""
+                },
+            ],
+        }
     };
+    export let innerCardStyle = {
+        firstSlot:"",
+        secondSlot:"",
+        padding:"",
+        isBoxed:true,
+        hasTwoCards:true,
+        hasPrimaryBg:true,
+        hasDangerBg:false,
+        hasTextCentered:true,
+    };
+    onMount(() => {
+        console.log(":::: multiCardConfig ", multiCardConfig)
+
+    });
+
 </script>
 
-<CardGroup isBoxed={multiCardConfig.config.cardTitleConfig.isBoxed} 
-        hasPrimaryBg={multiCardConfig.config.cardTitleConfig.hasPrimaryBg} 
-        hasTwoCards={multiCardConfig.config.cardTitleConfig.hasTwoCards} 
-        hasTextCentered={multiCardConfig.config.cardTitleConfig.hasTextCentered}>
-    <span slot="firstCard"> 
-        <p>{multiCardConfig.data.cardTitleData.period}</p>
-        <p>{multiCardConfig.data.cardTitleData.location}</p>
-    </span>
-</CardGroup>
+{#if data.length > 0}
+    {#each data as cardData, index}
+        <div class="{wrapperStyle}" in:fly={{y: 100, duration: 800 , delay: index * 100, easing:quintOut}} >
+            <CardGroup {...innerCardStyle}>
+                <p slot = 'firstCard'>{cardData}</p>
+            </CardGroup>
+        </div>
+    {/each}
+{:else}
+    {#each multiCardConfig.data.cardData as cardData, index}
+        <div class="{wrapperStyle}" in:fly={{y: 100, duration: 800 , delay: index * 100, easing:quintOut}} >
+            <CardGroup>
+                <p slot = 'firstCard'>{cardData.firstCardData}</p>
+                <p slot = 'secondCard'>{cardData.secondCardData}</p>
+            </CardGroup>
+        </div>
+    {/each}
+{/if}
 
-{#each multiCardConfig.data.firstCardData as cardData}
-    <CardGroup>
-        <p slot = 'firstCard'>Object-Oriented Analysis and Design Using UML</p>
-        <p slot = 'secondCard'>Java SE8 Fundamentals</p>
-    </CardGroup>
-{/each}
