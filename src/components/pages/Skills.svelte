@@ -5,7 +5,7 @@
 
     import { fly } from 'svelte/transition';
 </script>
-<div>
+<div id="skills">
 	<p class="is-size-2-desktop is-size-3-mobile is-size-3-tablet" in:fly={{y: 100, delay: 200,duration: 1000, easing:quintOut}}>Skills</p>
 	<div class="tile is-ancestor">
 		<div class="tile is-parent is-6">

@@ -24,3 +24,25 @@ $chevron-up : url("/icons/expand_less-white-18dp.svg");
     background-image: $chevron-up !important;
     background-repeat: no-repeat;
 }
+
+.floating-nav-menu {
+    background-color: rgba(0, 0, 0, 0.226);
+    position: fixed;
+    bottom: 6rem;
+    z-index: 99;
+    border-radius: 3rem;
+    padding: 0.7rem 1.7rem;
+}
+
+.floating-nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating-nav-btn {
+    background: transparent;
+    padding: 0.9rem;
+    border-radius: 50%;
+    font-size: 1.1rem;
+}

@@ -12,6 +12,10 @@
     background-size: cover;
 }
 
+.simple-bg {
+    background-color: #212121;
+}
+
 .bulma-badge {
     background-image: url("/images/made-with-bulma--dark.png");
 }
@@ -20,4 +24,17 @@
     background-color: #3636367d;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+}
+
+.card-dark-bg {
+    background-color: #424242 ;
+}
+
+.card-hover-primary{
+    border: 1px solid transparent;
+    transition: $transition;
+    &:hover {
+        background: transparent;
+        border-color: $primary;
+    }
 }

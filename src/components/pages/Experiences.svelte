@@ -43,7 +43,7 @@
     };
 </script>
 <p class="is-size-2-desktop is-size-3-mobile is-size-3-tablet" in:fly={{y: 100, delay: 200,duration: 800, easing:quintOut}}>Experiences</p>
-<div class="tile is-ancestor">
+<div class="tile is-ancestor" id="experiences">
 	<div class="tile is-parent" in:fly={{y: 100, delay: 400,duration: 800, easing:quintOut}}>
 		<!-- <div class="tile is-child box has-background-dark has-text-white-bis"> -->
 		<div class="tile is-child box glass-bg has-text-white-bis">

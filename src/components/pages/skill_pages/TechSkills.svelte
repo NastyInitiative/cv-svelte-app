@@ -25,8 +25,8 @@
 
 </script>
 <!-- <div class="tile is-child box m-10 has-background-dark has-text-white-bis" in:fly={{y: 100,duration: 800, delay: 400, easing:quintOut}}> -->
-<div class="tile is-child box m-10 glass-bg has-text-white-bis" in:fly={{y: 100,duration: 800, delay: 400, easing:quintOut}}>
-    <p class="title has-text-white-bis">Tech Skills</p>
+<div class="tile is-child box m-10 card-dark-bg has-text-white-bis" in:fly={{y: 100,duration: 800, delay: 400, easing:quintOut}}>
+    <p class="title has-text-white">Tech Skills</p>
     <Progress progress={programmingSkills} ></Progress>
     
     <div class="has-text-white-bis" >
@@ -43,7 +43,7 @@
                 Software di emulazione di macchine virtuali conosciuti
             </h3>
         </div>
-        <div class="box box-with-shadow  has-text-centered has-background-primary has-text-white-bis">
+        <div class="box box-with-shadow  has-text-centered has-background-primary has-text-white-bis card-hover-primary">
             <p> Oracle VirtualBox </p>
         </div>
     </div>

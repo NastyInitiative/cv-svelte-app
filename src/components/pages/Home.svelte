@@ -3,8 +3,8 @@
 	import { fly } from 'svelte/transition';
 </script>
 
-<div in:fly={{y: 200,duration: 1000, easing:quintOut}}>
-	<div class="pb-3">
+<div in:fly={{y: 200,duration: 1000, easing:quintOut}} id="home" class="vh-full center-items">
+	<div>
 		<p in:fly={{y: 30,duration: 600, delay: 200, easing:quintOut}}>Ciao, sono</p>
 		<p class="animate-border">
 			<a target="_blank" rel="noreferrer" href="https://linkedin.com/in/ionut-alexandru-pacuraru-4390b8182" class="animate-text show-title">
@@ -13,14 +13,14 @@
 			</a>
 		</p>
 		<p in:fly={{y: 30,duration: 600, delay: 600, easing:quintOut}}>e sono un Junior Front-End Developer</p>
-	</div>
-	<div class="tile is-ancestor about" in:fly={{y: 30,duration: 600, delay: 800, easing:quintOut}}>
-		<div class="tile is-parent " >
-			<div class="tile is-child box notification glass-bg has-text-white-bis">
-				<blockquote>
-					Sono appasionato del mondo informatico, piu nello specifico, di quello del gaming, programmazione e hardware PC.
-					Quando voglio staccarmi dal PC, trovo conforto e relax nella musica e lettura.
-				</blockquote>
+		<div class="tile is-ancestor about pt-5" in:fly={{y: 30,duration: 600, delay: 800, easing:quintOut}}>
+			<div class="tile is-parent " >
+				<div class="tile is-child box notification glass-bg has-text-white-bis card-dark-bg card-hover-primary">
+					<blockquote>
+						Sono appasionato del mondo informatico, piu nello specifico, di quello del gaming, programmazione e hardware PC.
+						Quando voglio staccarmi dal PC, trovo conforto e relax nella musica e lettura.
+					</blockquote>
+				</div>
 			</div>
 		</div>
 	</div>

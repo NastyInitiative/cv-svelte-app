@@ -41,7 +41,7 @@
 
 </script>
 <p class="is-size-2-desktop is-size-3-mobile is-size-3-tablet" in:fly={{y: 100, delay: 200,duration: 800, easing:quintOut}}>Education</p>
-<div class="tile is-ancestor">
+<div class="tile is-ancestor" id="education">
     <div class="tile is-parent is-6" in:fly={{y: 100, delay: 400,duration: 1000, easing:quintOut}}> 
         <div class="tile is-child glass-bg box has-text-white-bis ">
             <p class="title has-text-white-bis">Java e Android Developer</p>

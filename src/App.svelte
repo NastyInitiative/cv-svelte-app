@@ -11,12 +11,12 @@
 	let isBurgerMenuVisible = false;
 </script>
 <svelte:window bind:scrollY={verticalPosition}/>
+<section class="no-pd-top simple-bg">
+	<!-- <Navbar {routes} {isBurgerMenuVisible}></Navbar> -->
+	<MainBody {routes} {verticalPosition}></MainBody>
+</section>
 <Router url={url}>
 	<!-- START Hero section -->
-	<section class="hero nasty-bg is-fullheight">
-		<Navbar {routes} {isBurgerMenuVisible}></Navbar>
-		<MainBody {routes} {verticalPosition}></MainBody>
-	</section>
 </Router>
 
 <Footer></Footer>
